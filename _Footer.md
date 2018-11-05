@@ -1,0 +1,1 @@
+&copy; 2018 Graham Crockford. All Rights Reserved.
