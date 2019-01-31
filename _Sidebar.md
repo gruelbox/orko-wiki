@@ -14,5 +14,4 @@
    1. Configuration Reference (TODO)
 1. [Supporting the project](Supporting-The-Project)
 1. [Contributing](Contributing)
-1. [Coding Standards](Coding-Standards)
 1. [Developer Guide](Developer-guide)
