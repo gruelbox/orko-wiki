@@ -15,8 +15,8 @@ Pull requests are extremely welcome.  Please read on if you are interested in co
 Before submitting, please:
 
  - Understand that you are contributing to a project with a strong copyleft licence. In doing so, you agree to have your code licensed and distributed under the same terms as the rest of the project.
- - Have a skim of the [coding standards](Coding-Standards).
  - Check to see if there's anything relevant in the [developer guide](Developer-guide).
+ - Make sure you're fitting in the with project style.  Avoid unnecessarily re-ordering imports, stick to 2-space indenting, use logical structured indenting to make long clauses easier to read.  If you're working on the Javascript, please format the code with [Prettier](https://github.com/prettier/prettier) (the Visual Studio Code plugin is excellent).
 
 Follow the guide for bug fixes or enhancements below.
 
