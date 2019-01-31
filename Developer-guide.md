@@ -1,6 +1,6 @@
 # Before you do anything
 
-This project follows the same [contributing](https://github.com/alfasoftware/morf/wiki/Contributing) and [coding standards](https://github.com/alfasoftware/morf/wiki/Coding-Standards) guides as the [Morf](https://github.com/alfasoftware/morf) project (I wrote them, so I like them). Please read them before submitting pull requests.
+Read the [contributing](Contributing) guide.
 
 # Areas of interest
 
