@@ -1,4 +1,4 @@
-**Note that there is currently no installer. [Can you help](https://github.com/badgerwithagun/orko/issues/115) with this?**
+**Note that there is currently no installer. [Can you help](../issues/115) with this?**
 
 To install and run the application on your PC, first make sure you have a Java JRE installed, at least Java 8 (1.8). Then run:
 
@@ -15,8 +15,8 @@ Note that:
 - This uses local files (in the current directory) to hold state. It's not production strength, and doesn't support multiple instances of the application For a production deployment, a standalone database is recommended. For more information on this, see below.
 - Without your exchange details, no balance or trade history information is available, and all trading is paper-trading. We'll add these in a moment.
 - It's not secure to deploy on a public server. **Don't deploy this anywhere public**.
-    - There's no out-of-the-box support for SSL (HTTPS). All data is transmitted in the clear, which means a third party can trivially intercept your data. It's provided ready out-of-the-box to deploy on Heroku (more on this below), which should be secure, or you can set up a suitable proxy yourself.
-    - Authentication features are all disabled. We talk through enabling these in the [Heroku setup instructions](Manual-installation-on-Heroku).
+  - There's no out-of-the-box support for SSL (HTTPS). All data is transmitted in the clear, which means a third party can trivially intercept your data. It's provided ready out-of-the-box to deploy on Heroku (more on this below), which should be secure, or you can set up a suitable proxy yourself.
+  - Authentication features are all disabled. We talk through enabling these in the [Heroku setup instructions](Manual-installation-on-Heroku).
 
 ## Add your exchange account details
 
@@ -44,7 +44,7 @@ Then restart. The application will now use this bot to send you notifications on
 
 ## Consider setting up a standalone database.
 
-You may get greater reliability using a standalone MySQL database than the file-based database used by default.  Install [MySQL](https://dev.mysql.com/downloads/mysql/), then change your database settings:
+You may get greater reliability using a standalone MySQL database than the file-based database used by default. Install [MySQL](https://dev.mysql.com/downloads/mysql/), then change your database settings:
 
 ```
 database:

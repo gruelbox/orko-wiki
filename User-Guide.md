@@ -1,1 +1,1 @@
-This is currently missing. [Can you help](https://github.com/badgerwithagun/orko/issues/116)?
+This is currently missing. [Can you help](../issues/116)?

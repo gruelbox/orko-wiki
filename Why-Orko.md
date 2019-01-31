@@ -21,6 +21,6 @@ Orko is designed to solve a range of problems with existing solutions:
 
 ## Licence
 
-Orko uses the [Affero General Public License v3](https://github.com/badgerwithagun/orko/blob/master/LICENSE), which gives you the right to use the application freely for private or commercial purposes, but requires that if you make changes to the application and then offer the application online as a service, you must make those changes publicly available.
+Orko uses the [Affero General Public License v3](../blob/master/LICENSE), which gives you the right to use the application freely for private or commercial purposes, but requires that if you make changes to the application and then offer the application online as a service, you must make those changes publicly available.
 
 This is specifically to avoid a commercial online service based largely on Orko from launching without contributing improvements back to the open source project. However, this should not discourage such a service from launching and differentiating itself in other ways (hosting, DR, support or SLAs, for example).
