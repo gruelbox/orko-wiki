@@ -12,5 +12,5 @@
 1. [User Guide](User-Guide)
    1. [Scripting](Scripting)
    1. Configuration Reference (TODO)
-1. [Supporting the prokect](Supporting-The-Project)
+1. [Supporting the project](Supporting-The-Project)
 1. [Developer Guide](Developer-guide)
