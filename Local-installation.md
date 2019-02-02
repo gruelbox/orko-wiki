@@ -1,6 +1,13 @@
-**Note that there is currently no installer. [Can you help](../issues/115) with this?**
+This page covers the (current quite manual) process for installing on a local machine.
 
-To install and run the application on your PC, first make sure you have a Java JRE installed, at least Java 8 (1.8). Then run:
+**Note that there are currently no windows/deb/rpm/brew installer.** [Can you help](../issues/115) with this?
+**[Docker support](../issues/51) would also be welcome.**  Help required there too
+
+# Platform specifics
+
+## Ubuntu/Debian
+
+First make sure you have a Java JRE installed, at least Java 8 (1.8). Then run:
 
 ```
 sudo apt-get install maven
@@ -8,9 +15,13 @@ sudo apt-get install maven
 ./start.sh
 ```
 
-Navigate to http://localhost:8080 to view the application.
+## Windows
 
-Note that:
+The Ubuntu/Debian instructions will work under Windows Subsystem for Linux with either Ubuntu or Debian.
+
+# How it works
+
+Navigate to http://localhost:8080 to view the application.
 
 - This uses local files (in the current directory) to hold state. It's not production strength, and doesn't support multiple instances of the application For a production deployment, a standalone database is recommended. For more information on this, see below.
 - Without your exchange details, no balance or trade history information is available, and all trading is paper-trading. We'll add these in a moment.
