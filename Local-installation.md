@@ -1,4 +1,6 @@
-This page covers the (current quite manual) process for installing on a local machine.  Also see the [one click](One-click-installation-on-Heroku) and [manual](Manual-installation-on-Heroku) instructions for installing on Heroku, if you're using Heroku.
+This page covers the (currently quite manual) process for installing on a local machine.
+
+If you're using Heroku, see the [one click](One-click-installation-on-Heroku) and [manual](Manual-installation-on-Heroku) instructions for installing on Heroku.
 
 **Note that there are currently no windows/deb/rpm/brew installer.** [Can you help](../issues/115) with this?
 
