@@ -12,6 +12,7 @@
    1. Upgrading (TODO)
 1. [User Guide](User-Guide)
    1. [Scripting](Scripting)
+   1. [Script examples](Script_Library)
    1. Configuration Reference (TODO)
 1. [Supporting the project](Supporting-The-Project)
 1. [Contributing](Contributing)
