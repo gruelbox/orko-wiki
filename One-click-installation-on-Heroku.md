@@ -4,11 +4,11 @@ Okta is preconfigured and optimised to run securely on [Heroku](https://www.hero
 
 To instantly deploy your own instance of the application, just click the button below. The Heroku installer will talk you through the process.
 
-To deploy the last stable release:
+To deploy the last **stable release**:
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/gruelbox/orko/tree/stable)
 
-To deploy the latest development snapshot:
+To deploy the latest **development snapshot**:
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/badgerwithagun/orko)
 
