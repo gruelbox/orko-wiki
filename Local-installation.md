@@ -8,10 +8,12 @@ This page covers the (current quite manual) process for installing on a local ma
 
 ## Ubuntu/Debian
 
-First make sure you have a Java JRE installed, at least Java 8 (1.8). Then run:
+First make sure you have a Java JRE installed, at least Java 8 (1.8), and **git**. Then run:
 
 ```
-sudo apt-get install maven
+sudo apt-get install maven git
+git clone -b release https://github.com/gruelbox/orko.git
+cd orko
 ./build.sh
 ./start.sh
 ```
