@@ -3,7 +3,6 @@
 1. [What can it do?](Example-Use-Cases)
 1. [Project status](Project-status)
 1. [Installing locally](Local-installation)
-   1. Upgrading (TODO)
 1. Installing on Heroku
    1. [Quick installer](One-click-installation-on-Heroku)
    1. [Manual install](Manual-installation-on-Heroku)
