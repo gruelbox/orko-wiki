@@ -1,4 +1,4 @@
-This page covers the (current quite manual) process for installing on a local machine.
+This page covers the (current quite manual) process for installing on a local machine.  Also see the [one click](One-click-installation-on-Heroku) and [manual](Manual-installation-on-Heroku) instructions for installing on Heroku, if you're using Heroku.
 
 **Note that there are currently no windows/deb/rpm/brew installer.** [Can you help](../issues/115) with this?
 
@@ -8,7 +8,7 @@ This page covers the (current quite manual) process for installing on a local ma
 
 ## Ubuntu/Debian
 
-First make sure you have a Java JRE installed, at least Java 8 (1.8), and **git**. Then run:
+First make sure you have a Java JRE installed, at least Java 8 (1.8). Then run:
 
 ```
 sudo apt-get install maven git
@@ -18,13 +18,13 @@ cd orko
 ./start.sh
 ```
 
+Navigate to http://localhost:8080 to view the application.
+
 ## Windows
 
 The Ubuntu/Debian instructions will work under Windows Subsystem for Linux with either Ubuntu or Debian.
 
 # How it works
-
-Navigate to http://localhost:8080 to view the application.
 
 - This uses local files (in the current directory) to hold state. It's not production strength, and doesn't support multiple instances of the application For a production deployment, a standalone database is recommended. For more information on this, see below.
 - Without your exchange details, no balance or trade history information is available, and all trading is paper-trading. We'll add these in a moment.
