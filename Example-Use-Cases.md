@@ -30,4 +30,6 @@ Save it and then use it any any coin you're looking at, just like any other trad
 
 <img src="images/runscript.PNG" width="800" alt="Run a script"/>
 
+See more [script ideas](Script_Library).
+
 There's a lot more to discover.  Have you done something awesome with Orko?  Please let us know!
