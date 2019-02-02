@@ -2,7 +2,7 @@ This page covers the (current quite manual) process for installing on a local ma
 
 **Note that there are currently no windows/deb/rpm/brew installer.** [Can you help](../issues/115) with this?
 
-**[Docker support](../issues/51) would also be welcome.**  Help required there too
+**[Docker support](../issues/51) would also be welcome.**  Help required there too.
 
 # Platform specifics
 
