@@ -22,7 +22,7 @@ Follow the guide for bug fixes or enhancements below.
 
 ### Bug fixes & documentation improvements
 
-Bug fixes, documentation improvements etc are extremely welcome and will usually be approved as long as they pass the [coding standards](Coding-Standards).
+Bug fixes, documentation improvements etc are extremely welcome and will usually be approved as long as they work, are good, clean code and are thoroughly tested.
 
 ### New features
 
