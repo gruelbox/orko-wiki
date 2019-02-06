@@ -29,4 +29,4 @@ Bug fixes, documentation improvements etc are extremely welcome and will usually
 If you are thinking of adding a feature, **please**:
 
 - Check the [issues](../issues) to see if someone else is already working on it. If they are, see if you can get involved.
-- [Create a new issue](../issues/new/choose), explaining your idea, so the community can discuss the requirements and approach. Once there is agreement, you will be welcome to submit a pull request with the changes.
+- [Create a new issue](../issues/new/choose), explaining your idea, so the community can discuss the requirements and approach. [Here's an example](https://github.com/gruelbox/orko/issues/151) of a good one. Once there is agreement, you will be welcome to submit a pull request with the changes.
