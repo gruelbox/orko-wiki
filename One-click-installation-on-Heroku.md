@@ -22,7 +22,7 @@ Want your phone to beep when stuff happens?
 
 # Complete security setup
 
-TODO
+By default, the one-click deploy will set you up without two-factor authentication, passwords in cleartext 
 
 # Add your API keys
 
