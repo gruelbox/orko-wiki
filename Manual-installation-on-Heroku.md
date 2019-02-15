@@ -18,7 +18,7 @@ cd orko
 
 Before your deploy, you should create a two-factory authentication key.
 
-[Follow this guide](Enable-two-factor-authentication).
+[Follow this guide](Enable-two-factor-authentication) to create your keys. You will use these to set up your environment variables shortly.
 
 ### Get set up on Heroku
 
@@ -44,12 +44,12 @@ Set up the following environment variables in addition to those already configur
 | `MAVEN_CUSTOM_GOALS`               | `clean package`                                                                                                                                                                                    |
 | `TELEGRAM_BOT_TOKEN`               | Optional. See [Telegram Notifications](Telegram-Notifications)                                                                                                  |
 | `TELEGRAM_CHAT_ID`                 | Optional. See [Telegram Notifications](Telegram-Notifications). Required if `TELEGRAM_BOT_TOKEN` is set.                                                                                                                                   |
-| `AUTH_TOKEN`                       | Your 2FA secret key used when whitelisting an IP. Can be omitted if you don't want this additional layer of security.                                                                              |
-| `SIMPLE_AUTH_USERNAME`             | The username you want to use when logging in.                                                                                                                                                      |
-| `SIMPLE_AUTH_PASSWORD`             | The password you want to use when logging in.                                                                                                                                                      |
-| `SIMPLE_AUTH_SECRET`               | A long, randomised string of characters to act as the cryptocraphic seed for issued tokens.                                                                                                        |
+| `AUTH_TOKEN`                       | Part of [security setup](Enable-two-factor-authentication).                                                                              |
+| `SIMPLE_AUTH_USERNAME`             | Part of [security setup](Enable-two-factor-authentication).                                                                                                                                                     |
+| `SIMPLE_AUTH_PASSWORD`             | Part of [security setup](Enable-two-factor-authentication).                                                                                                                                                      |
+| `SIMPLE_AUTH_SECRET`               | Part of [security setup](Enable-two-factor-authentication).                                                                                                        |
 | `SIMPLE_AUTH_TOKEN_EXPIRY_MINUTES` | The time before each token issued will expire and the user will be forced to log in again, in minutes. 1440 is a sensible default.                                                                 |
-| `SIMPLE_AUTH_SECOND_FACTOR`        | A 2FA secret key used when logging in. Can either be same value as AUTH_TOKEN, or if you want to be super-secure, use a completely different 2FA code.                                             |
+| `SIMPLE_AUTH_SECOND_FACTOR`        | Part of [security setup](Enable-two-factor-authentication).                                               |
 | `SCRIPT_SIGNING_KEY`               | A random, long sequence of any characters. These are used to cryptographically sign any script jobs in the database so if the database is compromised, an attacker can't inject malicious scripts. |
 
 Optionally, you can add any of these to add authenticated support for exchanges where you have API keys:
@@ -75,7 +75,3 @@ Optionally, you can add any of these to add authenticated support for exchanges 
 There are some [more settings](Optional-Heroku-settings) if you want to start tweaking.
 
 That's it! Visit https://your-app-name.herokuapp.com to go through security and log in.
-
-### Store the password securely
-
-Unhappy with storing your password as an environment variable in plaintext? You can store it as a [secure hash](Hashing-Passwords).
