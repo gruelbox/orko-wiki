@@ -40,23 +40,9 @@ By default there are no exchange account details, so trading isn't enabled. To r
 
 ## Set up Telegram so you can get notifications on your phone
 
-While notifications are shown in the UI, it's handy to get them away from your screen.
+Want your phone to beep when stuff happens?
 
-1. Create a Telegram bot using the [BotFather](https://core.telegram.org/bots). Note down the API token.
-1. Create a new channel from the Telegram app, and make it public (we'll make it private shortly).
-1. Add your bot as a member of the channel, so it can post to it.
-1. Use the following URL to get the ID of your channel: https://api.telegram.org/YOURBOTID:YOURTOKEN/getChat?chat_id=@YourChannelName
-1. Once you've noted down the channel ID, make your channel private from the app so no-one else can access it (you can't use the above API to ge the IP of a private channel).
-
-Once you have the connection details, you can set the appropriate section in your `example-config.yml` file. Uncomment (remove the # symbols) from the following lines, replacing the values with the token and chat id you noted down.
-
-```
-# telegram:
-#   botToken: YOU
-#   chatId: REALLYWANTTHIS
-```
-
-Then restart. The application will now use this bot to send you notifications on your private channel. You can add more people to the channel if you like.
+[Read more...](Telegram-Notifications)
 
 ## Consider setting up a standalone database.
 
