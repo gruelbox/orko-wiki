@@ -8,4 +8,4 @@ The following are defaulted or automatically set up, so you can ignore them unle
 | `WHITELIST_EXPIRY_SECONDS` | How long an IP whitelisting should last. 86400 (24 hours) is a good default. |
 | `LOG_LEVEL`                | `INFO` (or `DEBUG` if you need it)                                           |
 
-Also see [Delegated authentication with Okta](Delegated-authentication-with-Okta) and [Hashing Passwords](Hashing-Passwords) for some additional settings.
+Also see  [Hashing Passwords](Hashing-Passwords) for some additional settings.
