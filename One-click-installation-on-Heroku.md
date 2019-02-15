@@ -26,7 +26,23 @@ Your application is not fully secure yet.  Feel free to play with it, but don't 
 
 # Add your API keys
 
-TODO
+Once your application is secure, you can now set up the following environment variables to start trading against your exchange accounts.
+
+| Variable            | Set to                     |
+| ------------------- | -------------------------- |
+| `GDAX_API_KEY`      | Your GDAX API key.         |
+| `GDAX_SECRET`       | Your GDAX secret.          |
+| `GDAX_PASSPHRASE`   | Your GDAX passphrase.      |
+| `BINANCE_API_KEY`   | Your Binance API key.      |
+| `BINANCE_SECRET`    | Your Binance secret.       |
+| `BITFINEX_API_KEY`  | Your BitFinex API key.     |
+| `BITFINEX_SECRET`   | Your Binance secret.       |
+| `BITTREX_API_KEY`   | Your Bittrex API key.      |
+| `BITTREX_SECRET`    | Your Bittrex secret.       |
+| `KUCOIN_API_KEY`    | Your Kucoin API key.       |
+| `KUCOIN_SECRET`     | Your Kucoin secret.        |
+| `BITMEX_API_KEY`    | Your Bitmex API key.       |
+| `BITMEX_SECRET`     | Your Bitmex secret.        |
 
 # Upgrades
 
