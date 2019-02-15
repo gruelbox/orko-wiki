@@ -1,6 +1,6 @@
 This page explains how to set up Telegram so that you can get notifications of trades, price alerts and so on via your phone.
 
-**This could do with automation. [Can you help](../issues/195)?**
+**This urgently needs to be made more accessible to non-technical users.. [Can you help](../issues/195)?**
 
 # Create your private Telegram channel
 
