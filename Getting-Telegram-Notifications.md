@@ -10,7 +10,7 @@ This page explains how to set up Telegram so that you can get notifications of t
 
 You should now have the bot token and chat ID noted down.
 
-# Configuring the application
+# Configure the application
 
 Configuration is different depending on how the application is deployed.
 
