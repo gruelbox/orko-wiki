@@ -56,8 +56,6 @@ Optionally, you can add any of these to add authenticated support for exchanges 
 
 | Variable            | Set to                     |
 | ------------------- | -------------------------- |
-| `CRYPTOPIA_API_KEY` | Your Cryptopia API key.    |
-| `CRYPTOPIA_SECRET`  | Your Cryptopia API secret. |
 | `GDAX_API_KEY`      | Your GDAX API key.         |
 | `GDAX_SECRET`       | Your GDAX secret.          |
 | `GDAX_PASSPHRASE`   | Your GDAX passphrase.      |
