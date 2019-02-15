@@ -10,7 +10,7 @@
     1. Upgrading (TODO)
 1.  Configuration Guides
     1. [Enabling telegram notifications](Telegram-Notifications)
-    1. [Enabling two/three factor authentication}(Enable-two-factor-authentication)
+    1. [Enabling two/three factor authentication](Enable-two-factor-authentication)
     1. [Hashing passwords](Hashing-Passwords)
 1. [User Guide](User-Guide)
     1. [Scripting](Scripting)
