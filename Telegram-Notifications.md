@@ -14,7 +14,7 @@ You should now have the bot token and chat ID noted down.
 
 # Configure the application
 
-Configuration is different depending on how the application is deployed.
+Configuration is different depending on how the application is deployed. Select the appropriate section below:
 
 ## Local installations
 
