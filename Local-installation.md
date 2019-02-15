@@ -1,6 +1,13 @@
-This page covers the (currently quite manual) process for installing on a local machine.
+This page covers the (currently quite manual) process for installing on a local machine. This is intended for:
 
-If you're using Heroku, see the [one click](One-click-installation-on-Heroku) and [manual](Manual-installation-on-Heroku) instructions for installing on Heroku.
+* Trying out Orko, to see if you like it.
+* Super-paranoid traders who want a setup on their local machine that isn't visible to the outside world
+* Developers.
+
+If that's not you, also see:
+
+* [One click](One-click-installation-on-Heroku) installation on Heroku
+* [Manual](Manual-installation-on-Heroku) installation on Heroku.
 
 **Note that there are currently no windows/deb/rpm/brew installer.** [Can you help](../issues/115) with this?
 
