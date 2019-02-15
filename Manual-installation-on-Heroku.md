@@ -4,7 +4,16 @@ Heroku is how I host Orko. Because of that, Orko is preconfigured to work out of
 
 The Hobby account is cheap at \$7/pm per server if running constantly, SSL is provided out of the box and the continuous deployment features are great.
 
-**These instructions are intended if you want to set up Heroku manually**.
+**These instructions are intended if you want to set up Heroku manually**.  They have only been tested thus far on Ubuntu/Debian.
+
+### Build the application locally
+```
+sudo apt-get install maven git
+git clone -b release https://github.com/gruelbox/orko.git
+cd orko
+./build.sh
+./start.sh
+```
 
 ### Create a 2FA key
 
@@ -15,7 +24,7 @@ Security is (optionally) double-layered:
 
 Generating the key is done offline for additional security.
 
-1. Generate a new 2FA secret using `./generate-key.sh` (you need to have done a build first using `./build.sh`).
+1. Generate a new 2FA secret using `./generate-key.sh`.
 1. Note it down - we'll need it when configuring the application.
 1. Enter it into Google Authenticator on your phone.
 
@@ -32,7 +41,7 @@ Now, from the the directory where you've cloned this repository (the same direct
 > git push heroku master
 ```
 
-Add the following addons: **Papertrail** and **JawsDB Maria**.
+Add the following Heroku addons: **Papertrail** and **JawsDB Maria**.
 
 Set up the following environment variables in addition to those already configured by the add-ons you've provisioned:
 
