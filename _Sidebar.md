@@ -9,6 +9,8 @@
    1. [Hashing passwords](Hashing-Passwords)
    1. [Optional Heroku settings](Optional-Heroku-settings)
    1. Upgrading (TODO)
+1.  Configuration Guides
+   1. [Enabling telegram notifications](Telegram-Notifications)
 1. [User Guide](User-Guide)
    1. [Scripting](Scripting)
    1. [Script examples](Script_Library)
