@@ -14,6 +14,20 @@ To deploy the latest **development snapshot**:
 
 If that doesn't work, or you don't trust it, you can [install the application manually](Manual-installation-on-Heroku).
 
+# Enable notifications on your phone
+
+Want your phone to beep when stuff happens?
+
+[Read more...](Telegram-Notifications)
+
+# Complete security setup
+
+TODO
+
+# Add your API keys
+
+TODO
+
 # Upgrades
 
 TODO
