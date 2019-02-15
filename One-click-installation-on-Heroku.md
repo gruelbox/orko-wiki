@@ -22,7 +22,7 @@ Want your phone to beep when stuff happens?
 
 # Complete security setup
 
-By default, the one-click deploy will set you up without two-factor authentication, passwords in cleartext 
+Your application is not fully secure yet.  Feel free to play with it, but don't add your API keys and play with real money until you have [completed the security setup](Enable-two-factor-authentication).
 
 # Add your API keys
 
