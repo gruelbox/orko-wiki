@@ -2,7 +2,7 @@
 
 Heroku is how I host Orko. Because of that, Orko is preconfigured to work out of the box on Heroku, so this is currently by far the easiest way to run it. The Hobby account is cheap at \$7/pm per server if running constantly, SSL is provided out of the box and the continuous deployment features are great.
 
-For most users the [one-click installer](One-click-installation-on-Heroku) is the right way to deploy Orko.  **These instructions are intended for advanced users who want to set up every stage manually**. Don't try and follow these instructions unless you are 100% confident building and deploying applications yourself.
+**These instructions are intended for advanced users who want to set up every stage manually**. For most users the [one-click installer](One-click-installation-on-Heroku) is the right way to deploy Orko. Don't try and follow these instructions unless you are 100% confident building and deploying applications yourself.  It is also recommended that you have first followed the [local installation](Local-installation) guide fully and understand all the moving parts.
 
 ### Build the application locally
 You'll need this to have access to the authentication tools.
