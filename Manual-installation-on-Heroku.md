@@ -7,6 +7,7 @@ The Hobby account is cheap at \$7/pm per server if running constantly, SSL is pr
 **These instructions are intended if you want to set up Heroku manually**.  They have only been tested thus far on Ubuntu/Debian.
 
 ### Build the application locally
+You'll need this to have access to the authentication tools.
 ```
 sudo apt-get install maven git
 git clone -b release https://github.com/gruelbox/orko.git
