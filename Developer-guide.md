@@ -2,6 +2,46 @@
 
 Read the [contributing](Contributing) guide.
 
+# Developer setup guide
+
+## Back-end only
+
+Orko is a fairly standard Maven build. If you're not using an IDE, perform a build using:
+```
+./build.sh
+```
+If you are using Eclipse, you need to configure M2E to enable annotation processing so that AutoValue works, but otherwise it should "just work".
+
+Either way, run `MonolithApplication` with the following arguments:
+
+```
+server example-config.yml
+```
+
+The file `example-config.xml` works out-of-the-box with no authentication and a file-based database using H2.
+
+Use the following VM arguments:
+
+```
+-server -Xmx186m -Xms186m -Xss256k -XX:MaxMetaspaceSize=96m -Dsun.net.inetaddr.ttl=60 -Dio.netty.leakDetectionLevel=advanced
+```
+## Front end only
+
+You don't really need to know Java to work on the JS front-end. It's a simple, non-ejected [create-react-app](https://github.com/facebook/create-react-app) application.
+
+Build the back end server so that you can run it separately, and launch it:
+```
+./build-backend-only.sh
+./start.sh
+```
+Now setup the front end dev environment.  You need node.js and `npm` installed first (don't use the versions in deb/rpm package repositories - google them and follow the instructions on their websites). Once done:
+```
+cd orko-ui
+npm install
+npm start
+```
+You can now edit the JS code and enjoy hot reloading.  It is assumed that the backend is running on port 8080 and the webpack dev loader on port 3000.
+
 # Areas of interest
 
 ## Javascript front-end code
