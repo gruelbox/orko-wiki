@@ -8,7 +8,7 @@ Heroku is how I host Orko. Because of that, Orko is preconfigured to work out of
 
 Before your deploy, you should [create a two-factory authentication key](Enable-two-factor-authentication). You will use these to set up your environment variables shortly.
 
-## Set up Telegram so you can get notifications on your phone
+### Set up Telegram so you can get notifications on your phone
 
 [Set up a Telegram channel](Telegram-Notifications) so you can get mobile push notifications.
 
