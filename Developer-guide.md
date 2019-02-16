@@ -25,6 +25,8 @@ Use the following VM arguments:
 ```
 -server -Xmx186m -Xms186m -Xss256k -XX:MaxMetaspaceSize=96m -Dsun.net.inetaddr.ttl=60 -Dio.netty.leakDetectionLevel=advanced
 ```
+This uses pre-packaged production front-end code without the need for a node environment.
+
 ## Front end only
 
 You don't really need to know Java to work on the JS front-end. It's a simple, non-ejected [create-react-app](https://github.com/facebook/create-react-app) application.
@@ -41,6 +43,17 @@ npm install
 npm start
 ```
 You can now edit the JS code and enjoy hot reloading.  It is assumed that the backend is running on port 8080 and the webpack dev loader on port 3000.
+
+## Both back end and front end
+
+Start the back end in your IDE as detailed above, then simply:
+```
+cd orko-ui
+npm install
+npm start
+```
+You now have both the back end and front end running in dev together.
+
 
 # Areas of interest
 
