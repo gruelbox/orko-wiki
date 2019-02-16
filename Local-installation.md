@@ -1,37 +1,46 @@
 This page covers the (currently quite manual) process for installing on a local machine. This is intended for:
 
-* Trying out Orko, to see if you like it.
-* Super-paranoid traders who want a setup on their local machine that isn't visible to the outside world
-* Developers.
+- Trying out Orko, to see if you like it.
+- Super-paranoid traders who want a setup on their local machine that isn't visible to the outside world
+- Developers.
 
 If that's not you, also see:
 
-* [One click](One-click-installation-on-Heroku) installation on Heroku
-* [Manual](Manual-installation-on-Heroku) installation on Heroku.
+- [One click](One-click-installation-on-Heroku) installation on Heroku
+- [Manual](Manual-installation-on-Heroku) installation on Heroku.
 
 **Note that there are currently no windows/deb/rpm/brew installer.** [Can you help](../issues/115) with this?
-
-**[Docker support](../issues/51) would also be welcome.**  Help required there too.
+**[Docker support](../issues/51) would also be welcome.** Help required there too.
 
 # Platform specifics
 
 ## Ubuntu/Debian
 
-First make sure you have a Java JRE installed, at least Java 8 (1.8). Then run:
+- First make sure you have a Java JRE installed, at least Java 8 (1.8). This is usually enough:
 
 ```
-sudo apt-get install maven git
-git clone -b release https://github.com/gruelbox/orko.git
-cd orko
-./build.sh
-./start.sh
+sudo apt-get install openjdk
 ```
 
-Navigate to http://localhost:8080 to view the application.
+- Head over to [the latest release](../releases/latest) and download **orko-app.jar** and **example-config.yml**. Copy these to wherever you want to run the application from.
+- Then run:
+
+```
+java -jar orko-app.jar server example-config.yml
+```
+
+- Navigate to http://localhost:8080 to view the application.
 
 ## Windows
 
-The Ubuntu/Debian instructions will work under Windows Subsystem for Linux with either Ubuntu or Debian.
+- Install Java if it's not installed already. [Download it from here](https://www.java.com/en/download/).
+- Head over to [the latest release](../releases/latest) and download **orko-app.jar** and **example-config.yml**. Copy these to wherever you want to run the application from.
+- Ctrl-Shift-Right-Click in the Explorer window where these two files are and select either **Open PowerShell window here** or **Open command window here**, whichever is visible.
+- Type the following to start the application:
+
+```
+java -jar orko-app.jar server example-config.yml
+```
 
 # How it works
 
