@@ -41,6 +41,7 @@ Once your application is secure, you can now set up the following environment va
 | `BITTREX_SECRET`    | Your Bittrex secret.       |
 | `KUCOIN_API_KEY`    | Your Kucoin API key.       |
 | `KUCOIN_SECRET`     | Your Kucoin secret.        |
+| `KUCOIN_PASSPHRASE` | Your Kucoin passphrase.    |
 | `BITMEX_API_KEY`    | Your Bitmex API key.       |
 | `BITMEX_SECRET`     | Your Bitmex secret.        |
 
