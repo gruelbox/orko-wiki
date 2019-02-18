@@ -5,3 +5,7 @@ Read the [README](../blob/master/README.md) for getting started hints. See the c
 # Got improvements to make?
 
 Please submit any updates to the documentation as a pull request on the [wiki mirror](../../orko-wiki).
+
+# Need help right now?
+
+Try [Gitter](https://gitter.im/gruelbox/community).
