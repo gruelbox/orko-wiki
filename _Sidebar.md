@@ -14,7 +14,7 @@
     1. [Hashing passwords](Hashing-Passwords)
 1. [User Guide](User-Guide)
     1. [Scripting](Scripting)
-    1. [Script examples](Script_Library)
+    1. [Script examples](Script-Library)
 1. [Supporting the project](Supporting-The-Project)
 1. [Contributing](Contributing)
 1. [Developer Guide](Developer-guide)
