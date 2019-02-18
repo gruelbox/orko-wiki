@@ -81,6 +81,7 @@ Optionally, you can add any of these to add authenticated support for exchanges 
 | `BITTREX_SECRET`   | Your Bittrex secret.   |
 | `KUCOIN_API_KEY`   | Your Kucoin API key.   |
 | `KUCOIN_SECRET`    | Your Kucoin secret.    |
+| `KUCOIN_PASSPHRASE` | Your Kucoin passphrase.    |
 | `BITMEX_API_KEY`   | Your Bitmex API key.   |
 | `BITMEX_SECRET`    | Your Bitmex secret.    |
 
