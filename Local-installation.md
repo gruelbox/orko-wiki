@@ -60,7 +60,9 @@ Want your phone to beep when stuff happens?
 
 [Read more...](Telegram-Notifications)
 
-## Consider setting up a standalone database.
+## (Optional) use a MySQL database
+
+For more advanced users only.
 
 You may get greater reliability using a standalone MySQL database than the file-based database used by default. Install [MySQL](https://dev.mysql.com/downloads/mysql/), then change your database settings:
 
