@@ -1,13 +1,6 @@
-This page covers the (currently quite manual) process for installing on a local machine. This is intended for:
+Running Orko on your local machine is the quickest way to get started. As long as your machine is safe from prying eyes, you don't have to worry about web security.
 
-- Trying out Orko, to see if you like it.
-- Super-paranoid traders who want a setup on their local machine that isn't visible to the outside world
-- Developers.
-
-If that's not you, also see:
-
-- [One click](One-click-installation-on-Heroku) installation on Heroku
-- [Manual](Manual-installation-on-Heroku) installation on Heroku.
+If you want to run the application in the cloud and have access to it from anywhere, see the [one-click](One-click-installation-on-Heroku) (best for most people) or [manual](Manual-installation-on-Heroku) (for the experts and the paranoid) Heroku setup instructions.
 
 **Note that there are currently no windows/deb/rpm/brew installer.** [Can you help](../issues/115) with this?
 **[Docker support](../issues/51) would also be welcome.** Help required there too.
