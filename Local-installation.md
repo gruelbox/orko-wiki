@@ -15,8 +15,8 @@ If you want to run the application in the cloud and have access to it from anywh
 java -jar orko-app.jar server example-config.yml
 ```
 - Navigate to http://localhost:8080 to view the application.
-- In the **Coins** tab, click the **+** button to select an exchange and coin pair to start seeing what the application can do.  Note that without exchange account details, you get a limited experience.
-- To trade against your real exchange accounts, shut down the application (the command window), modify `example-config.yml`, filling in the relevant sections with your exchange api key, secret and (in some cases) passphrase. Leave any exchanges you don't have API details for blank. Then run again.
+- In the **Coins** tab, click the **+** button to select an exchange and coin pair to start seeing what Orko can do.  Note that without exchange account details, you get a limited experience.
+- To trade against your real exchange accounts, shut down Orko (the command window), modify `example-config.yml`, filling in the relevant sections with your exchange api key, secret and (in some cases) passphrase. Leave any exchanges you don't have API details for blank. Then run again.
 
 # On Ubuntu/Debian
 
@@ -30,8 +30,8 @@ sudo apt-get install openjdk
 java -jar orko-app.jar server example-config.yml
 ```
 - Navigate to http://localhost:8080 to view the application.
-- In the **Coins** tab, click the **+** button to select an exchange and coin pair to start seeing what the application can do.  Note that without exchange account details, you get a limited experience.
-- To trade against your real exchange accounts, shut down the application, modify `example-config.yml`, filling in the relevant sections with your exchange api key, secret and (in some cases) passphrase. Leave any exchanges you don't have API details for blank. Then run again.
+- In the **Coins** tab, click the **+** button to select an exchange and coin pair to start seeing what Orko can do.  Note that without exchange account details, you get a limited experience.
+- To trade against your real exchange accounts, shut down Orko (**Ctrl-C**), modify `example-config.yml`, filling in the relevant sections with your exchange api key, secret and (in some cases) passphrase. Leave any exchanges you don't have API details for blank. Then run again.
 
 # How it works
 
