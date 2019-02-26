@@ -12,35 +12,32 @@ If that's not you, also see:
 **Note that there are currently no windows/deb/rpm/brew installer.** [Can you help](../issues/115) with this?
 **[Docker support](../issues/51) would also be welcome.** Help required there too.
 
-# Platform specifics
+# On Windows
 
-## Ubuntu/Debian
-
-- First make sure you have a Java JRE installed, at least Java 8 (1.8). This is usually enough:
-
-```
-sudo apt-get install openjdk
-```
-
-- Head over to [the latest release](../releases/latest) and download **orko-app.jar** and **example-config.yml**. Copy these to wherever you want to run the application from.
-- Then run:
-
-```
-java -jar orko-app.jar server example-config.yml
-```
-
-- Navigate to http://localhost:8080 to view the application.
-
-## Windows
-
-- Install Java if it's not installed already. [Download it from here](https://www.java.com/en/download/).
+- Install Java on your PC if it's not installed already. [Download it from here](https://www.java.com/en/download/).
 - Head over to [the latest release](../releases/latest) and download **orko-app.jar** and **example-config.yml**. Copy these to wherever you want to run the application from.
 - Ctrl-Shift-Right-Click in the Explorer window where these two files are and select either **Open PowerShell window here** or **Open command window here**, whichever is visible.
 - Type the following to start the application:
-
 ```
 java -jar orko-app.jar server example-config.yml
 ```
+- Navigate to http://localhost:8080 to view the application.
+- To trade against your real exchange accounts, shut down the application (the command window), modify `example-config.yml`, filling in the relevant sections with your exchange api key, secret and (in some cases) passphrase. Leave any exchanges you don't have API details for blank. Then run again.
+
+# On Ubuntu/Debian
+
+- First make sure you have a Java JRE installed, at least Java 8 (1.8). This is usually enough:
+```
+sudo apt-get install openjdk
+```
+- Head over to [the latest release](../releases/latest) and download **orko-app.jar** and **example-config.yml**. Copy these to wherever you want to run the application from.
+- Then run:
+```
+java -jar orko-app.jar server example-config.yml
+```
+- Navigate to http://localhost:8080 to view the application.
+- Visit http://localhost:8080 to start.
+- To trade against your real exchange accounts, shut down the application, modify `example-config.yml`, filling in the relevant sections with your exchange api key, secret and (in some cases) passphrase. Leave any exchanges you don't have API details for blank. Then run again.
 
 # How it works
 
@@ -50,11 +47,7 @@ java -jar orko-app.jar server example-config.yml
   - There's no out-of-the-box support for SSL (HTTPS). All data is transmitted in the clear, which means a third party can trivially intercept your data. It's provided ready out-of-the-box to deploy on Heroku (more on this below), which should be secure, or you can set up a suitable proxy yourself.
   - Authentication features are all disabled. We talk through enabling these in the [Heroku setup instructions](Manual-installation-on-Heroku).
 
-## Add your exchange account details
-
-By default there are no exchange account details, so trading isn't enabled. To remedy this, modify `orko-all-in-one/example-config.yml`. To the relevant sections, add the API keys details for the exchanges you use. Leave any exchanges you don't have API details for blank. Then run again.
-
-## Set up Telegram so you can get notifications on your phone
+## (Optional) Set up Telegram so you can get notifications on your phone
 
 Want your phone to beep when stuff happens?
 
