@@ -40,13 +40,15 @@ java -jar orko-app.jar server example-config.yml
   - There's no out-of-the-box support for SSL (HTTPS). All data is transmitted in the clear, which means a third party can trivially intercept your data. It's provided ready out-of-the-box to deploy on Heroku (more on this below), which should be secure, or you can set up a suitable proxy yourself.
   - Authentication features are all disabled. We talk through enabling these in the [Heroku setup instructions](Manual-installation-on-Heroku).
 
-## (Optional) Set up Telegram so you can get notifications on your phone
+# Optional extras
+
+## Set up Telegram so you can get notifications on your phone
 
 Want your phone to beep when stuff happens?
 
 [Read more...](Telegram-Notifications)
 
-## (Optional) use a MySQL database
+## Use a MySQL database
 
 For more advanced users only.
 
