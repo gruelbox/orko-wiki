@@ -35,8 +35,7 @@ java -jar orko-app.jar server example-config.yml
 
 # How it works
 
-- This uses local files (in the current directory) to hold state. It's not production strength, and doesn't support multiple instances of the application For a production deployment, a standalone database is recommended. For more information on this, see below.
-- Without your exchange details, no balance or trade history information is available, and all trading is paper-trading. We'll add these in a moment.
+- This uses a file-based database. If you want to use a real DB, see the MySQL setup guide below.
 - It's not secure to deploy on a public server. **Don't deploy this anywhere public**.
   - There's no out-of-the-box support for SSL (HTTPS). All data is transmitted in the clear, which means a third party can trivially intercept your data. It's provided ready out-of-the-box to deploy on Heroku (more on this below), which should be secure, or you can set up a suitable proxy yourself.
   - Authentication features are all disabled. We talk through enabling these in the [Heroku setup instructions](Manual-installation-on-Heroku).
