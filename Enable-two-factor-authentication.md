@@ -1,3 +1,14 @@
+# Do I need this?
+
+If you answer **yes** to all the following questions, you can ignore this section and use the default, insecure settings:
+
+- [ ] Orko is not directly visible on the public web (e.g. I must use a virtual desktop to view it, or tunnel in via SSH or a VPN)
+- [ ] I am running Orko on a private PC or a private server to which only I have access
+- [ ] _If it's a private PC:_ the PC is physically secure and protected by OS-level security.
+- [ ] _If it's private server:_ I am confident in the authentication mechanism used to access it (long password, second factor authentication such as a private key and passphrase).
+
+If you answered **no** to the first question, please read and follow the rest of this document.  If you answered **no** to any of the other questions, _please consider running Orko somewhere else or improving your OS-level/physical security first_. No amount of web security will help you if someone else has free access to your server!
+
 # Background
 
 It is optional, but highly recommended, if you use two or three factor authentication when logging in.
@@ -45,7 +56,7 @@ Note it down - we'll need it when configuring the application. That done, enter 
 
 Repeat this, creating a second code, if you are intending to use two 2FA codes (see above).
 
-## Local application/private server
+## Local application/personal server
 
 Locate this section of your config.yml (`example-config.yml` is supplied with each release).
 
