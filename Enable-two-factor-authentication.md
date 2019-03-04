@@ -45,7 +45,7 @@ Note it down - we'll need it when configuring the application. That done, enter 
 
 Repeat this, creating a second code, if you are intending to use two 2FA codes (see above).
 
-## Local application/VPS setup
+## Local application/private server
 
 Locate this section of your config.yml (`example-config.yml` is supplied with each release).
 
