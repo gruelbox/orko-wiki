@@ -45,7 +45,7 @@ Note it down - we'll need it when configuring the application. That done, enter 
 
 Repeat this, creating a second code, if you are intending to use two 2FA codes (see above).
 
-## Local application setup
+## Local application/VPS setup
 
 Locate this section of your config.yml (`example-config.yml` is supplied with each release).
 
@@ -69,6 +69,8 @@ Uncomment these lines, replacing the value of:
 - `userName` and `password` with your chosen username and password. Consider [hashing](Hashing-Passwords) the password just in case your machine is compromised.
 
 ## Heroku setup
+
+In Heroku, you don't touch the YML file - everything is substituted in with environment variables.
 
 Set up the following environment variables:
 
