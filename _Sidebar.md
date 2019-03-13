@@ -7,7 +7,7 @@
     1. [Quick installer](One-click-installation-on-Heroku)
     1. [Manual install](Manual-installation-on-Heroku)
     1. [Optional Heroku settings](Optional-Heroku-settings)
-    1. Upgrading (TODO)
+    1. [Upgrading](Upgrading)
 1.  Configuration Guides
     1. [Enabling telegram notifications](Telegram-Notifications)
     1. [Enabling two/three factor authentication](Enable-two-factor-authentication)
