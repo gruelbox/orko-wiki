@@ -1,10 +1,10 @@
-# Before you do anything
+## Before you do anything
 
 Read the [contributing](Contributing) guide.
 
-# Developer setup guide
+## Developer setup guide
 
-## Back-end only
+### Back-end only
 
 Orko is a fairly standard Maven build. If you're not using an IDE, perform a build using:
 ```
@@ -27,7 +27,7 @@ Use the following VM arguments:
 ```
 This uses pre-packaged production front-end code without the need for a node environment.
 
-## Front end only
+### Front end only
 
 You don't really need to know Java to work on the JS front-end. It's a simple, non-ejected [create-react-app](https://github.com/facebook/create-react-app) application.
 
@@ -44,7 +44,7 @@ npm start
 ```
 You can now edit the JS code and enjoy hot reloading.  It is assumed that the backend is running on port 8080 and the webpack dev loader on port 3000.
 
-## Both back end and front end
+### Both back end and front end
 
 Start the back end in your IDE as detailed above, then simply:
 ```
@@ -55,15 +55,15 @@ npm start
 You now have both the back end and front end running in dev together.
 
 
-# Areas of interest
+## Areas of interest
 
-## Javascript front-end code
+### Javascript front-end code
 
 I used this project to teach myself JS/React, so the front-end side of things is nowhere near as clean as the back-end. It's mostly pretty conventional simple React/Redux, but having learned as I was going, it's a bit inconsistent and full of bad practices I haven't had time to clean up. It's also completely bereft of unit tests.
 
 Orko definitely needs some attention from someone with a lot more Javascript experience. In particular, the performance of the UI leaves something to be desired (see [#120](../issues/120)).
 
-## How to add an exchange
+### How to add an exchange
 
 1. Check that [XChange](https://github.com/knowm/XChange) supports the exchange. If not, please ask there about adding support first. Until XChange supports it, Orko won't
 1. Check on streaming support at [xchange-stream](https://github.com/bitrich-info/xchange-stream). This isn't necessary, but greatly improves the responsiveness of Orko if it's available.
@@ -76,7 +76,7 @@ Orko definitely needs some attention from someone with a lot more Javascript exp
 
 You will never get this far without problems. All exchanges have some quirk or other which requires tweaks. XChange is not 100% consistent and sometimes exchanges (particularly margin exchanges like Bitfinex or ~~hunting grounds~~ derivatives exchanges like Bitmex) have to be addressed differently. Generally, the best way to move quickly is to hack the necessary changes into Orko with a TODO, then follow up with a pull request to XChange or xchange-stream.
 
-## Scripting
+### Scripting
 
 The scripting feature is barely more than a proof-of-concept right now. The scripting API itself is hardly easy to use. The plan right now is first to [migrate from Nashorn](../issues/113) (which only provides Javascript ES5) to a fully ES6 alternative (GraalVM or possibly Rhino) and [layer a more `when(this).then(that)` type of DSL](../issues/122) over the low level API for less advanced users. However, alternative ideas are very welcome.
 
