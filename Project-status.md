@@ -1,4 +1,4 @@
-# How ready is it for use?
+## How ready is it for use?
 
 Orko is in active daily use by me, in production. I rely on it for most of my day-to-day spot trading, so that indicates my level of confidence. However:
 
@@ -7,7 +7,7 @@ Orko is in active daily use by me, in production. I rely on it for most of my da
 - At the moment, this is a labour of love project for **just one person**. The world of crypto moves fast, and most of the time that means it moves faster than I do. It is commonplace for a change to happen on an exchange which breaks Orko and this can take time to resolve. **Make sure you always have a backup option**, usually in the form of your exchange's own apps, so that you can trade while issues are resolved, and **please be respectful** of the fact that this is being done entirely in my spare time.
 - Orko is built on top of the [XChange](https://github.com/knowm/XChange) and [xchange-stream](https://github.com/bitrich-info/xchange-stream) open source libraries, and often these sorts of issues have to be resolved there first. This extra hurdle can make issues take even longer to resolve.
 
-# Roadmap
+## Roadmap
 
 Following initial release, the following larger items are top of the list to tackle next:
 
@@ -24,6 +24,6 @@ Following initial release, the following larger items are top of the list to tac
 - Switching to the full commercial [TradingView widget](../issues/35) where kline feeds are publicised by the exchanges, allowing orders and reference prices to be shown on the chart, drawings to be retained between sessions, and charts to be shown for exchanges with no native TradingView support (such as Kucoin).
 - Bring Bitmex and Kraken support up to production strength, and support more exchanges
 
-# Help needed
+## Help needed
 
 Please see the [help needed](../issues/111) issue if you would like to get involved.
