@@ -2,7 +2,7 @@ This page explains how to define your own complex order types or actions using O
 
 **Please note**, this functionality has only just been started and is intentionally initially quite limited.  We'll be adding a lot more features soon.**
 
-# Background
+## Background
 
 Orko breaks down the tasks you might perform with an exchange into a handful of **Basic Actions** and an indefinite number of **Complex Actions**.  Basic actions include:
 
@@ -19,7 +19,7 @@ Almost all other actions are defined as complex actions. Complex actions can per
 
 However, Orko additionally opens this up to you to define your own complex orders using Javascript.
 
-# Hello world
+## Hello world
 
 TODO
 
@@ -32,9 +32,9 @@ function start() {
 
 TODO
 
-# Reference
+## Reference
 
-## Functions to implement
+### Functions to implement
 
 You must implement at the very least a function called `start()`, as shown in the example above.  This must return one of:
 
@@ -45,7 +45,7 @@ You must implement at the very least a function called `start()`, as shown in th
 
 You may, in addition, implement `stop()`.  This will be called when your job shuts down, either due to an application shut down or because you called `control.done()`, `control.fail()` or `control.restart()` (see below).  It should be used to do any cleanup, such as releasing event callbacks (again, see below).
 
-## Running in the background
+### Running in the background
 
 To enter the `RUNNING` state, you must register callbacks in `start()` and deregister them in `stop()`.  The simplest way to do this is using the standard Javascript `setInterval()` method.  The following will send "Hello world" to the notifications panel in the UI once a second until forcibly killed.
 
@@ -96,7 +96,7 @@ We're doing several things here:
 - Using some **transient state** in the form of `var`s
 - Stopping the job with success from within a callback (this calls `stop()` automatically).
 
-## Actions
+### Actions
 
 In an event callback or on startup or shutdown, you may call any of the following:
 
@@ -149,7 +149,7 @@ var orderId = trading.limitOrder({
 })
 ```
 
-## Parameters
+### Parameters
 
 You can define any number of input parameters for a complex action, and these will be requested from the user when they submit it. You have already seen `selectedCoin`, which is set automatically, but any other named parameters can be accessed in the same way, i.e. `parameters.parameterName`. So, we could make the number of prices that will be shown in the above example limited to a number specified by the user by changing the script to:
 
@@ -157,7 +157,7 @@ You can define any number of input parameters for a complex action, and these wi
 if (count++ >= parameters.pricesToReport) {
 ```
 
-## State
+### State
 
 **Transient state** means "state that only lasts as long as the current session".  In our scripts, this is "anything in a `var`".  Since jobs are designed to be stopped and restarted automatically (you'd never trust a stop order if it disappeared during a server restart!), any transient state is lost.  For some purposes, this is fine.
 
