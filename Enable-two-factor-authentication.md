@@ -1,4 +1,4 @@
-# Do I need this?
+## Do I need this?
 
 If you answer **yes** to all the following questions, you can ignore this section and use the default, insecure settings:
 
@@ -9,7 +9,7 @@ If you answer **yes** to all the following questions, you can ignore this sectio
 
 If you answered **no** to the first question, please read and follow the rest of this document.  If you answered **no** to any of the other questions, _please consider running Orko somewhere else or improving your OS-level/physical security first_. No amount of web security will help you if someone else has free access to your server!
 
-# Background
+## Background
 
 It is optional, but highly recommended, if you use two or three factor authentication when logging in.
 
@@ -36,15 +36,15 @@ You have the option of setting up:
 
 Which you use is up to you.
 
-# Instructions
+## Instructions
 
 **This urgently needs to be made more accessible to non-technical users. [Can you help](../issues/196)?**
 
-## Download Orko
+### Download Orko
 
 Head over to [the latest release](../releases/latest) and download **orko-app.jar**. We will be using some built-in command-line tools. Make sure you have a Java JRE installed, at least Java 8 (1.8).
 
-## Create a key
+### Create a key
 
 Open a command line/terminal in the same directory that you put **orko-app.jar**. Run the following command to generate a new 2FA key:
 
@@ -56,7 +56,7 @@ Note it down - we'll need it when configuring the application. That done, enter 
 
 Repeat this, creating a second code, if you are intending to use two 2FA codes (see above).
 
-## Local application/personal server
+### Local application/personal server
 
 Locate this section of your config.yml (`example-config.yml` is supplied with each release).
 
@@ -79,7 +79,7 @@ Uncomment these lines, replacing the value of:
 - `secret` with a long random string of characters. Don't copy this from somewhere else - just mash the keyboard randomly. This is used as a cryptographic seed.
 - `userName` and `password` with your chosen username and password. Consider [hashing](Hashing-Passwords) the password just in case your machine is compromised.
 
-## Heroku setup
+### Heroku setup
 
 In Heroku, you don't touch the YML file - everything is substituted in with environment variables.
 
