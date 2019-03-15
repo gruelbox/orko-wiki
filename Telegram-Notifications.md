@@ -2,7 +2,7 @@ This page explains how to set up Telegram so that you can get notifications of t
 
 **This urgently needs to be made more accessible to non-technical users.. [Can you help](../issues/195)?**
 
-# Create your private Telegram channel
+## Create your private Telegram channel
 
 1. Create a Telegram bot using the [BotFather](https://core.telegram.org/bots). Note down the API token.
 1. Create a new channel from the Telegram app, and make it public (we'll make it private shortly).
@@ -12,11 +12,11 @@ This page explains how to set up Telegram so that you can get notifications of t
 
 You should now have the bot token and chat ID noted down.
 
-# Configure the application
+## Configure the application
 
 Configuration is different depending on how the application is deployed. Select the appropriate section below:
 
-## Local installations
+### Local installations
 
 Set the appropriate section in your `example-config.yml` file. Uncomment (remove the # symbols) from the following lines, replacing the values with the token and chat id you noted down.
 
@@ -28,10 +28,10 @@ Set the appropriate section in your `example-config.yml` file. Uncomment (remove
 
 Then restart. The application will now use this bot to send you notifications on your private channel. You can add more people to the channel if you like.
 
-## Heroku
+### Heroku
 
 Set the `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` environment variables.  The application will automatically restart.
 
-# Testing
+## Testing
 
 To test that you are getting notifications correctly, create a price alert which will fire immediately.  You should get the alert both on-screen and in your Telegram app.
