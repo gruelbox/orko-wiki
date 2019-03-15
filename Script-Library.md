@@ -1,10 +1,10 @@
 Here are a few simple scripted order types which are both useful and a base for you own creations.
 
-# Sell alt when BTC price drops
+## Sell alt when BTC price drops
 
 As described [here](Example-Use-Cases#sell-your-alts-when-btcs-price-drops).
 
-## Parameters
+### Parameters
 
 | Name	| Description	| Default	| Reqd |
 | ----- | ------------- | ------------- | ---- |
@@ -12,7 +12,7 @@ As described [here](Example-Use-Cases#sell-your-alts-when-btcs-price-drops).
 | limitPrice	| Limit price| | Yes |
 | stopPrice	| Stop price (BTC Binance)| | Yes |	
 
-## Code
+### Code
 
 ```
 var subscription
