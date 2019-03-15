@@ -1,6 +1,6 @@
 Okta is preconfigured and optimised to run securely on [Heroku](https://www.heroku.com/). The Hobby account is cheap at \$7/pm per server if running constantly.
 
-# Installation
+## Installation
 
 To instantly deploy your own instance of the application, just click the button below. The Heroku installer will talk you through the process.
 
@@ -14,17 +14,17 @@ To deploy the latest **development snapshot**:
 
 If that doesn't work, or you don't trust it, you can [install the application manually](Manual-installation-on-Heroku).
 
-# Enable notifications on your phone
+## Enable notifications on your phone
 
 Want your phone to beep when stuff happens?
 
 [Read more...](Telegram-Notifications)
 
-# Complete security setup
+## Complete security setup
 
 Your application is not fully secure yet.  Feel free to play with it, but don't add your API keys and play with real money until you have [completed the security setup](Enable-two-factor-authentication).
 
-# Add your API keys
+## Add your API keys
 
 Once your application is secure, you can now set up the following environment variables to start trading against your exchange accounts.
 
@@ -45,6 +45,6 @@ Once your application is secure, you can now set up the following environment va
 | `BITMEX_API_KEY`    | Your Bitmex API key.       |
 | `BITMEX_SECRET`     | Your Bitmex secret.        |
 
-# Upgrades
+## Upgrades
 
 TODO
