@@ -2,6 +2,7 @@
 1. [Why Orko?](Why-Orko)
 1. [What can it do?](Example-Use-Cases)
 1. [Project status](Project-status)
+1. [Roadmap](Roadmap)
 1. [Installing locally](Local-installation)
 1. Installing on Heroku
     1. [Quick installer](One-click-installation-on-Heroku)
