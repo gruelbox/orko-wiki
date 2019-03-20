@@ -9,7 +9,12 @@ Orko is in active daily use by me, in production. I rely on it for most of my da
 
 ## Roadmap
 
-Following initial release, the following larger items are top of the list to tackle next:
+Initial milestones:
+
+- [Initial public announcement](../projects/3)
+- [v1.0.0 release](../projects/5)
+
+These, the following larger items are top of the list to tackle next:
 
 - A proper user guide or [in-app tutorial](../issues/116).
 - Improving [security](../issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Asecurity) in a number of ways.
