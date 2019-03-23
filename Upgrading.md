@@ -46,4 +46,4 @@ git pull origin stable
 git checkout stable
 git push -f heroku stable:master
 ```
-That's it! From now on, you can use the "manual install" approach detailed above to perform upgrades.
+That's it! From now on, you can use the "manual install" approach [detailed above](#after-a-manual-install) to perform upgrades.
