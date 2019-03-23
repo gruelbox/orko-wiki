@@ -17,7 +17,7 @@ Before your deploy, you should [create a two-factor authentication key](Enable-t
 Heroku works by pushing a git repository of the code, so you'll need to clone the repository locally.
 
 ```
-git clone -b release https://github.com/gruelbox/orko.git
+git clone -b stable https://github.com/gruelbox/orko.git
 cd orko
 ```
 
@@ -31,7 +31,7 @@ Now, from the the directory where you've cloned the Orko code:
 
 ```
 > heroku create
-> git push heroku release:master
+> git push heroku stable:master
 ```
 
 Once that's done, provision a MySQL database and some proper logging support:
