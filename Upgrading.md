@@ -13,7 +13,6 @@ cd orko
 Now just update the code and push it to Heroku:
 ```
 git pull origin stable
-git checkout stable
 git push heroku stable:master
 ```
 The application will be upgraded and automatically restart.
