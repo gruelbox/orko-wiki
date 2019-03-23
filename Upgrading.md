@@ -6,7 +6,11 @@ If you installed using the [local/self managed instructions](/Local-installation
 
 ### After a manual install
 
-If you installed manually using [these instructions](Manual-installation-on-Heroku), it's easy.  Simply do the following:
+If you installed manually using [these instructions](Manual-installation-on-Heroku), it's easy.  First navigate to where you checked out the code during the setup process, e.g.:
+```
+cd orko
+```
+Now just update the code and push it to Heroku:
 ```
 git pull origin stable
 git checkout stable
