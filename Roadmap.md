@@ -4,9 +4,7 @@ Here is the current set of completed changes which are ready to go out in the ne
 
 **Upgrading:**
 
-This update does not affect the database schema, so if there are problems, it can be easily rolled back to 0.12.2. The upgrade approach depends on how you have Orko deployed:
-
-TODO
+This update does not affect the database schema, so if there are problems, it can be easily rolled back to 0.12.2. Follow [these instructions](https://github.com/gruelbox/orko/wiki/Upgrading) to upgrade.
 
 **Enhancements:**
 
