@@ -42,8 +42,8 @@ git remote add origin https://github.com/gruelbox/orko
 ```
 - Finally, push the latest code to Heroku:
 ```
-git pull origin stable
-git checkout stable
+git fetch
+git checkout -t origin/stable
 git push -f heroku stable:master
 ```
 That's it! From now on, you can use the "manual install" approach [detailed above](#after-a-manual-install) to perform upgrades.
