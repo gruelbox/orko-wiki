@@ -2,10 +2,6 @@
 
 **TARGET RELEASE DATE: w/e 2019-04-08**
 
-Here is the current set of completed changes which are ready to go out in the next release.
-
-**Upgrading:**
-
 This update does not affect the database schema, so if there are problems, it can be easily rolled back to 0.12.2. Follow [these instructions](https://github.com/gruelbox/orko/wiki/Upgrading) to upgrade.
 
 **Enhancements:**
