@@ -33,12 +33,11 @@ java -jar orko-app.jar server example-config.yml
 - In the **Coins** tab, click the **+** button to select an exchange and coin pair to start seeing what Orko can do.  Note that without exchange account details, you get a limited experience.
 - To trade against your real exchange accounts, shut down Orko (**Ctrl-C**), modify `example-config.yml`, filling in the relevant sections with your exchange api key, secret and (in some cases) passphrase. Leave any exchanges you don't have API details for blank. Then run again.
 
-## How it works
+## Security warning
 
-- This uses a file-based database. If you want to use a real DB, see the MySQL setup guide below.
-- It's not secure to deploy on a public server. **Don't deploy this anywhere public**.
-  - There's no out-of-the-box support for SSL (HTTPS). All data is transmitted in the clear, which means a third party can trivially intercept your data. It's provided ready out-of-the-box to deploy on Heroku (more on this below), which should be secure, or you can set up a suitable proxy yourself.
-  - Authentication features are all disabled. We talk through enabling these in the [Heroku setup instructions](Manual-installation-on-Heroku).
+The above instructions create a completely unsecured instance of Orko. If you are intending to add your exchange account API details, only install this on a computer to which you have exclusive access (such as a personal PC).
+
+On the other hand, **don't deploy this anywhere which is visible on the internet** without _at least_ [enabling full two-factor authentication](Enable-two-factor-authentication) and deploying the application behind an appropriately configured **HTTPS proxy**. To do so manually is complicated, and not recommended.  Instead, you can do this automatically by [deploying to Heroku](One-click-installation-on-Heroku), which is simple and the recommended way to deploy a public instance.
 
 ## Optional extras
 
