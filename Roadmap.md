@@ -8,10 +8,13 @@ This update does not affect the database schema, so if there are problems, it ca
 
 **Enhancements:**
 
+* "Soft" orders (those managed by Orko rather than on the exchange) such as trailing stops, OCOs or soft stops, will now warn you if the balance isn't currently available to satisfy those orders. This is fine (you might have set them up specifically to trade on the opposite side of an exchange order, which is the whole reason for using soft orders) but sometimes a warning can help you realise you've done something stupid.
+* "Soft" orders (those managed by Orko rather than on the exchange) such as trailing stops, OCOs or soft stops, will now gracefully handle the case where the full balance isn't available to execute the order when their trigger price hits, and reduce the trade size to fit within the available balance.  This tries to handle the complexities of price scale and lot size filters applied by exchanges. This can be a lifesaver, since most exchanges take their fee from the purchased asset, making it hard to predict in advance what your balance will actually be. You can now just set a high guess and let Orko manage the trade amount down.
 * Now warns the user if any of the Bitfinex, Coinbase Pro or Binance socket connections to the exchanges drop for more than 10m (was previously only Binance).
 * Added simulated exchange, which allows integration testing without any socket connectivity to an exchange.  This will get improved over time and used heavily in Orko's own tests.
 * Improved the login/authentication experience with more descriptive fields, validation and tooltip help
 * On-screen alerts for new releases.
+* Bittrex is now fully supported.
 
 **Bug fixes:**
 
@@ -19,6 +22,8 @@ This update does not affect the database schema, so if there are problems, it ca
 * Improved logging around Bitfinex connection errors.
 * Fix bugs where Binance and Bifinex trades were displayed as buys when they were actually sells and vice versa under certain conditions.
 * Fix `UndeclaredThrowableException` errors in logs when using Kraken. Kraken remains in early stage support and is not recommended for use.
+* Some exchanges don't return all the 24hr stats (e.g. open or close prices). These previously displayed a spinner in the UI the whole time, hoping a value would arrive. They are now hidden entirely unless there's a value to display.
+* Fixed broken link to the Wiki from the paper trading confirmation text.
 
 **Developer quality-of-life:**
 
