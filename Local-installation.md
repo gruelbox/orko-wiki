@@ -15,7 +15,8 @@ If you want to run the application in the cloud and have access to it from anywh
 java -jar orko-app.jar server example-config.yml
 ```
 - Navigate to http://localhost:8080 to view the application.
-- In the **Coins** tab, click the **+** button to select an exchange and coin pair to start seeing what Orko can do.  Note that without exchange account details, you get a limited experience.
+- In the **Coins** tab, click the **+** button to select an exchange and coin pair to start seeing what Orko can do.
+- Note that without exchange account details, you get a limited experience with most "real" exchanges. You can get a feel for Orko's trading features by using the **Simulator** exchange, which is a simulated exchange running on your PC.
 - To trade against your real exchange accounts, shut down Orko (the command window), modify `example-config.yml`, filling in the relevant sections with your exchange api key, secret and (in some cases) passphrase. Leave any exchanges you don't have API details for blank. Then run again.
 
 ## On Ubuntu/Debian
@@ -30,7 +31,8 @@ sudo apt-get install openjdk
 java -jar orko-app.jar server example-config.yml
 ```
 - Navigate to http://localhost:8080 to view the application.
-- In the **Coins** tab, click the **+** button to select an exchange and coin pair to start seeing what Orko can do.  Note that without exchange account details, you get a limited experience.
+- In the **Coins** tab, click the **+** button to select an exchange and coin pair to start seeing what Orko can do.
+- Note that without exchange account details, you get a limited experience with most "real" exchanges. You can get a feel for Orko's trading features by using the **Simulator** exchange, which is a simulated exchange running on your PC.
 - To trade against your real exchange accounts, shut down Orko (**Ctrl-C**), modify `example-config.yml`, filling in the relevant sections with your exchange api key, secret and (in some cases) passphrase. Leave any exchanges you don't have API details for blank. Then run again.
 
 ## Security warning
@@ -46,15 +48,3 @@ On the other hand, **don't deploy this anywhere which is visible on the internet
 Want your phone to beep when stuff happens?
 
 [Read more...](Telegram-Notifications)
-
-### Use a MySQL database
-
-For more advanced users only.
-
-You may get greater reliability using a standalone MySQL database than the file-based database used by default. Install [MySQL](https://dev.mysql.com/downloads/mysql/), then change your database settings:
-
-```
-database:
-  connectionString: "mysql://username:password@host.ip.com:3306/databasename?rewriteBatchedStatements=true&useJDBCCompliantTimezoneShift=true
-  lockSeconds: 10
-```
