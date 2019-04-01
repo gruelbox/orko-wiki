@@ -6,7 +6,7 @@ This update does not affect the database schema, so if there are problems, it ca
 
 **Enhancements:**
 
-* Fantastic new reliability features for "soft" or "complex" orders.  These trailing stops, OCOs, soft stops or scripted complex orders:
+* Reliability features for "soft" or "complex" orders, which includes trailing stops, OCOs, soft stops or scripted complex orders:
     * All in-built soft/complex orders will now warn you if the balance isn't currently available to satisfy the orders. This is fine (you might have set them up specifically to trade on the opposite side of an exchange order, which is the whole reason for using soft orders) but sometimes a warning can help you realise you've done something stupid.
     * All soft/complex orders, including scripts, will now gracefully handle the case where the full balance isn't available to execute an order, and reduce the trade size to fit within the available balance.  This tries to handle the complexities of price scale and lot size filters applied by exchanges. This can be a lifesaver, since most exchanges take their fee from the purchased asset, making it hard to predict in advance what your balance will actually be after a sequence of trades. You can now just set a high guess and let Orko manage the trade amount down.
 * Now warns the user if any of the Bitfinex, Coinbase Pro or Binance socket connections to the exchanges drop for more than 10m (was previously only Binance).
