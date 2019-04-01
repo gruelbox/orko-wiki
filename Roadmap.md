@@ -1,5 +1,7 @@
 ## Next release (0.13.1)
 
+**TARGET RELEASE DATE: w/e 2019-04-08**
+
 Here is the current set of completed changes which are ready to go out in the next release.
 
 **Upgrading:**
