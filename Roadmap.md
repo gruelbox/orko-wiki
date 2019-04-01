@@ -1,8 +1,8 @@
 ## Current milestones
 
-Current milestones:
-
 - [v1.0.0 release](../projects/5)
+
+## After that...
 
 Then the following larger items are top of the list to tackle next. **Can you help**?
 
