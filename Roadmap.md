@@ -34,7 +34,6 @@ This update does not affect the database schema, so if there are problems, it ca
 
 Current milestones:
 
-- [Initial public announcement](../projects/3)
 - [v1.0.0 release](../projects/5)
 
 These, the following larger items are top of the list to tackle next. **Can you help**?
