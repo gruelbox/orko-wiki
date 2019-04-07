@@ -4,6 +4,10 @@
 
  - Added buttons to limit order panel allowing the trade amount to be set to the maximum possible given the current balance.
 
+**Bug fixes:**
+
+ - Fixed bug where zero balances on Bittrex would should as loading.
+
 ## Current milestones
 
 - [v1.0.0 release](../projects/5)
