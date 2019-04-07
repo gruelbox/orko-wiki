@@ -1,3 +1,9 @@
+## Next release
+
+**Features:""
+
+ - Added buttons to limit order panel allowing the trade amount to be set to the maximum possible given the current balance.
+
 ## Current milestones
 
 - [v1.0.0 release](../projects/5)
