@@ -1,6 +1,6 @@
 ## Next release
 
-**Features:""
+**Features:**
 
  - Added buttons to limit order panel allowing the trade amount to be set to the maximum possible given the current balance.
 
