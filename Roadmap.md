@@ -8,6 +8,10 @@
 
  - Fixed bug where zero balances on Bittrex would should as loading.
 
+**Developer quality-of-life:**
+
+ - Dependency updates
+
 ## Current milestones
 
 - [v1.0.0 release](../projects/5)
