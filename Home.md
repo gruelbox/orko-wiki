@@ -8,4 +8,4 @@ Please submit any updates to the documentation as a pull request on the [wiki mi
 
 ## Need help right now?
 
-Try [Gitter](https://gitter.im/gruelbox/community).
+Try [Gitter](https://gitter.im/gruelbox/community) or [Twitter|https://twitter.com/gruelbox].
