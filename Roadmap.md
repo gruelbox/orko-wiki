@@ -6,7 +6,8 @@
 
 **Bug fixes:**
 
- - Fixed bug where zero balances on Bittrex would should as loading.
+ - [bittrex] Fixed bug where zero balances would should as loading.
+ - [bitfinex] Fixed NPE exceptions and blocked updates when there are stop-limit orders on the exchange (XChange)
 
 **Developer quality-of-life:**
 
