@@ -10,6 +10,10 @@
  - [bitfinex] Fixed NPE exceptions and blocked updates when there are stop-limit orders on the exchange (XChange)
  - [bitfinex] Fixed NPE fetching currency metadata [#362]
 
+**Security:**
+
+ - Fixed security advisory in dropwizard-https-redirect caused by logging on untrusted user-supplied data.
+
 **Developer quality-of-life:**
 
  - Dependency updates
