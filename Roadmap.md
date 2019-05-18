@@ -2,7 +2,7 @@
 
 **Features:**
 
- - Added buttons to limit order panel allowing the trade amount to be set to the maximum possible given the current balance.
+ - Added buttons to limit order panel allowing the trade amount to be set to the maximum possible given the current balance. These need improving on mobile but do work so rolling out.
 
 **Bug fixes:**
 
