@@ -8,6 +8,7 @@
 
  - [bittrex] Fixed bug where zero balances would should as loading.
  - [bitfinex] Fixed NPE exceptions and blocked updates when there are stop-limit orders on the exchange (XChange)
+ - [bitfinex] Fixed NPE fetching currency metadata [#362]
 
 **Developer quality-of-life:**
 
