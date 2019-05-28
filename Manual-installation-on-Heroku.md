@@ -4,6 +4,13 @@ Heroku is how I host Orko. Because of that, Orko is preconfigured to work out of
 
 **These instructions are intended for advanced users who want to set up every stage manually**. For most users the [one-click installer](One-click-installation-on-Heroku) is the right way to deploy Orko. Don't try and follow these instructions unless you are 100% confident with building and deploying applications yourself. It is also recommended that you have first followed the [local installation](Local-installation) guide fully and understand all the moving parts before getting stuck in setting up a publicly-accessible server manually.
 
+## Warning
+Due to the phenomenal increase in market activity over the last few months, Heroku instances are too slow to handle more than a handful of coins at once. This is being handled under [#360](https://github.com/gruelbox/orko/issues/360). A proper solution will be in place soon. In the meantime, either:
+
+- keep the number of coins you track as low as possible (particularly making sure you only track one BTC/Fiat pair, which have the highest volume)
+- or avoid server-side ("soft") orders, since there is a good chance they will trigger too late if the server is lagging
+- or avoid Heroku.
+
 ### Create a 2FA key
 
 Before your deploy, you should [create a two-factor authentication key](Enable-two-factor-authentication). You will use these to set up your environment variables shortly.
