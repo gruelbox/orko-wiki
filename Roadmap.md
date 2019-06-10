@@ -2,6 +2,8 @@
 
 **Features:**
 
+- Added Docker support. Docker Hub releases and instructions are on the way...
+
 **Bug fixes:**
 
 - #374 - [kucoin] Fix error fetching trade history and open orders due to new API limits
@@ -10,6 +12,8 @@
 **Security:**
 
 **Developer quality-of-life:**
+
+- Removed Travis build. All CI is now handled by parallel CircleCI jobs, which is much faster and simpler.
 
 ## Current milestones
 
