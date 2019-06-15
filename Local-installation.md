@@ -35,6 +35,11 @@ java -jar orko-app.jar server example-config.yml
 - Note that without exchange account details, you get a limited experience with most "real" exchanges. You can get a feel for Orko's trading features by using the **Simulator** exchange, which is a simulated exchange running on your PC.
 - To trade against your real exchange accounts, shut down Orko (**Ctrl-C**), modify `example-config.yml`, filling in the relevant sections with your exchange api key, secret and (in some cases) passphrase. Leave any exchanges you don't have API details for blank. Then run again.
 
+## Using Docker
+
+- Make sure you have Docker and Docker Compose installed. See https://docs.docker.com/install/ for the right guide for your host OS.
+- Follow the instructions on https://hub.docker.com/r/gruelbox/orko.
+
 ## Security warning
 
 The above instructions create a completely unsecured instance of Orko. If you are intending to add your exchange account API details, only install this on a computer to which you have exclusive access (such as a personal PC).
