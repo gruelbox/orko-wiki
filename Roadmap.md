@@ -3,6 +3,7 @@
 **Features:**
 
 - Added Docker support. You can now pull and run directly from [Docker Hub](https://hub.docker.com/r/gruelbox/orko).
+- You can now always get a bleeding-edge version of the application from [GitHub releases](https://github.com/gruelbox/orko/releases). Serious issues such as fixes for changes to exchange APIs are usually fixed far quicker than the release cadence, so this can be extremely helpful.
 
 **Bug fixes:**
 
