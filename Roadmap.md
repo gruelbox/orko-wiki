@@ -2,7 +2,7 @@
 
 **Features:**
 
-- Added Docker support. Docker Hub releases and instructions are on the way...
+- Added Docker support. You can now pull and run directly from [Docker Hub](https://hub.docker.com/r/gruelbox/orko).
 
 **Bug fixes:**
 
