@@ -10,7 +10,9 @@ However, because hey, there's a chance they might steal your password and _not_ 
 
 ### Download Orko
 
-Head over to [the latest release](../releases/latest) and download **orko-app.jar**. We will be using some built-in command-line tools. Make sure you have a Java JRE installed, at least Java 8 (1.8).
+One of:
+ - _Either_ head over to [the latest release](../releases/latest) and download **orko-app.jar**. We will be using some built-in command-line tools. Make sure you have a Java JRE installed, at least Java 8 (1.8).
+ - _Or_ simply use Docker: `docker pull gruelbox/orko:stable`
 
 ### Decide on a nice, long password
 
@@ -19,14 +21,14 @@ Long is the important bit. Easy to remember is good. You've [seen this](https://
 ### Generate a secure salt and hashed password
 
 Run the following to generate a random salt, and hash your password with it:
-
 ```
 > java -jar orko-app.jar hash YOURPASSWORD
-Salt used: YOURSALT
-Hashed result: YOURHASHEDPASSWORD
 ```
-
-Note these both down.
+Or if using Docker:
+```
+> docker run gruelbox/orko:stable hash YOURPASSWORD
+```
+Note down the hash and salt.
 
 ### Configure your application
 
@@ -50,5 +52,7 @@ Replace the username and password as follows:
 Make sure you include the `HASH(...)` wrapping text.
 
 If you're using Heroku, set the environment variables `SIMPLE_AUTH_SALT` and `SIMPLE_AUTH_PASSWORD` with your salt and hashed password (including the `HASH(...)` wrapping text) respectively.
+
+You can configure Docker either using the local install approach (with a custom YML file), environment variables (as with Heroku) or Docker secrets.  See the [Docker Hub](https://hub.docker.com/r/gruelbox/orko) page for configuration information.
 
 Your password will now be checked by secure one-way hash.
