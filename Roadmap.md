@@ -8,6 +8,7 @@
 
 - #374 - [kucoin] Fix error fetching trade history and open orders due to new API limits
 - #375 - Added Github to the Content-Security-Policy. This was preventing new release alerts from appearing.
+- A number of low-level fixes from bumps to XChange and xchange-stream dependencies
 
 **Security:**
 
