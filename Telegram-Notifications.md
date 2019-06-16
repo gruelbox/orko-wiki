@@ -32,6 +32,15 @@ Then restart. The application will now use this bot to send you notifications on
 
 Set the `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` environment variables.  The application will automatically restart.
 
+### Docker
+See the [Docker Hub](https://hub.docker.com/r/gruelbox/orko) page for the various ways of supplying configuration. The simplest is to simply set environment variables:
+```
+docker run gruelbox/orko:stable \
+  -e TELEGRAM_BOT_TOKEN=YOURTOKEN \
+ - e TELEGRAM_CHAT_ID=YOURCHATID \
+ ... etc
+```
+
 ## Testing
 
 To test that you are getting notifications correctly, create a price alert which will fire immediately.  You should get the alert both on-screen and in your Telegram app.
