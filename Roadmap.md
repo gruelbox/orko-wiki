@@ -33,6 +33,6 @@ Then the following larger items are top of the list to tackle next. **Can you he
 - Support for margin trading [on Bitfinex](../issues/83) and Bitmex.
 - Improving the way the server [handles exchange downtime](../issues/124) such as long maintenance windows, and detects and reports issues in the server process. Currently log monitoring is required for this.
 - [Better management](../issues/125) of large numbers of coins (sorting, grouping etc)
-- More deployment options, such as [publishing an image in Docker Hub](../issues/51) and [creating rpm/deb/brew packages](../issues/115) as part of releases.
+- More deployment options, such as [creating rpm/deb/brew packages](../issues/115) as part of releases.
 - Switching to the full commercial [TradingView widget](../issues/35) where kline feeds are publicised by the exchanges, allowing orders and reference prices to be shown on the chart, drawings to be retained between sessions, and charts to be shown for exchanges with no native TradingView support (such as Kucoin).
 - Bring Bitmex and Kraken support up to production strength, and support more exchanges
