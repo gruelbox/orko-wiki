@@ -42,16 +42,20 @@ Which you use is up to you.
 
 ### Download Orko
 
-Head over to [the latest release](../releases/latest) and download **orko-app.jar**. We will be using some built-in command-line tools. Make sure you have a Java JRE installed, at least Java 8 (1.8).
+One of:
+ - _Either_ head over to [the latest release](../releases/latest) and download **orko-app.jar**. We will be using some built-in command-line tools. Make sure you have a Java JRE installed, at least Java 8 (1.8).
+ - _Or_ simply use Docker: `docker pull gruelbox/orko:stable`
 
 ### Create a key
 
 Open a command line/terminal in the same directory that you put **orko-app.jar**. Run the following command to generate a new 2FA key:
-
 ```
 java -jar orko-app.jar otp
 ```
-
+Or if you're using Docker:
+```
+docker run gruelbox/orko:stable otp
+```
 Note it down - we'll need it when configuring the application. That done, enter it into Google Authenticator app on your phone.
 
 Repeat this, creating a second code, if you are intending to use two 2FA codes (see above).
@@ -92,3 +96,7 @@ Set up the following environment variables:
 | `SIMPLE_AUTH_PASSWORD`      | The password you want to use when logging in. Consider [hashing](Hashing-Passwords) the password just in case your machine is compromised.       |
 | `SIMPLE_AUTH_SECRET`        | A long random string of characters. Don't copy this from somewhere else - just mash the keyboard randomly. This is used as a cryptographic seed. |  |
 | `SIMPLE_AUTH_SECOND_FACTOR` | The 2FA code that you want to use for login (can be the same as `secretKey`)                                                                     |
+
+### Docker setup
+
+You can configure Docker either using the local install approach (with a custom YML file), environment variables (as with Heroku) or Docker secrets.  See the [Docker Hub](https://hub.docker.com/r/gruelbox/orko) page for configuration information.
