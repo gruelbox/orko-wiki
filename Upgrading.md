@@ -2,6 +2,10 @@
 
 If you installed using the [local/self managed instructions](/Local-installation), simply download the [latest version](../releases/latest) and replace it on your machine.  Restart the application. That's it!
 
+## Docker
+
+All releases and bleeding edge snapshots are published to [Docker Hub](https://hub.docker.com/r/gruelbox/orko). Simply pull `gruelbox/orko:stable` for the latest release or `gruelbox/orko:latest` for the snapshot.
+
 ## Heroku
 
 ### After a manual install
