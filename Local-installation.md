@@ -8,7 +8,8 @@ If you want to run the application in the cloud and have access to it from anywh
 ## On Windows
 
 - Install Java on your PC if it's not installed already. [Download it from here](https://www.java.com/en/download/).
-- Head over to [the latest release](../releases/latest) and download **orko-app.jar** and **example-config.yml**. Copy these to wherever you want to run the application from.
+- Head over to the [latest official release](../releases/latest) (recommended) or the [bleeding-edge snapshot](../releases) (if you hit problems with the latest release or need an unreleased fix).
+- Download **orko-app.jar** and **example-config.yml**. Copy these to wherever you want to run the application from.
 - Ctrl-Shift-Right-Click in the Explorer window where these two files are and select either **Open PowerShell window here** or **Open command window here**, whichever is visible.
 - Type the following to start the application:
 ```
@@ -25,7 +26,8 @@ java -jar orko-app.jar server example-config.yml
 ```
 sudo apt-get install openjdk
 ```
-- Head over to [the latest release](../releases/latest) and download **orko-app.jar** and **example-config.yml**. Copy these to wherever you want to run the application from.
+- Head over to the [latest official release](../releases/latest) (recommended) or the [bleeding-edge snapshot](../releases) (if you hit problems with the latest release or need an unreleased fix).
+- Download **orko-app.jar** and **example-config.yml**. Copy these to wherever you want to run the application from.
 - Then run:
 ```
 java -jar orko-app.jar server example-config.yml
