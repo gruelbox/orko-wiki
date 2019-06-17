@@ -3,6 +3,7 @@
 **Features:**
 
 **Bug fixes:**
+ - #408 - Prevent socket disconnects/reconnects from sending constant browser notifications. These are now only shown in the app's notifications panel.
 
 **Security:**
 
