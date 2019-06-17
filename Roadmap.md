@@ -1,4 +1,5 @@
 ## Next release
+The following changes are available in the current SNAPSHOT release (see [Releases](https://github.com/gruelbox/orko/releases) or `pull gruelbox/orko:latest` on Docker).
 
 **Features:**
 
