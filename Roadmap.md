@@ -5,6 +5,7 @@ The following changes are available in the current SNAPSHOT release (see [Releas
 
 **Bug fixes:**
  - #408 - Prevent socket disconnects/reconnects from sending constant browser notifications. These are now only shown in the app's notifications panel.
+ - Bitfinex trades were arriving from the websocket with bid/ask flipped in seemingly random cases. This is now fixed.
 
 **Security:**
 
