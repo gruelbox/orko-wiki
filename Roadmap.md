@@ -6,10 +6,19 @@ The following changes are available in the current SNAPSHOT release (see [Releas
 **Bug fixes:**
  - #408 - Prevent socket disconnects/reconnects from sending constant browser notifications. These are now only shown in the app's notifications panel.
  - Bitfinex trades were arriving from the websocket with bid/ask flipped in seemingly random cases. This is now fixed.
+ - Prevent errors in streaming on some exchanges if not authenticated
+ - The UI was missing from the app build published to Docker Hub. Fixed.
+ - [xchange-stream] Coinbase Pro order books were causing high server CPU usage and intermittent corruption. Fixed.
 
 **Security:**
 
+- Lots of dependency updates
+
 **Developer quality-of-life:**
+
+- Preparation for switch to Java 11. Build now works fine on both Java 8 and 11.
+- Fixed numerous intermittent CI/build errors
+- Moved to track the standard XChange and xchange-stream releases on Maven. I'm going to experiment with using classpath overrides for expedited fixes for the time being to see how things go. This should speed up release cycles.
 
 ## Current milestones
 
