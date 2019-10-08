@@ -1,6 +1,23 @@
 ## Next release
 For the changes available in the current SNAPSHOT release, see [Releases](https://github.com/gruelbox/orko/releases). Alternatively, `pull gruelbox/orko:latest` on Docker.
 
+Current contents:
+
+**Features:**
+
+**Bug fixes:**
+
+**Security:**
+
+**Developer quality-of-life:**
+
+ - [WIP] Eliminated redux/reselect from UI code and replaced with more sensible modular Contexts.
+ - Switch to Java 11
+
+## Current milestones
+
+- [v1.0.0 release](../projects/5)
+
 ## After that...
 
 Then the following larger items are top of the list to tackle next. **Can you help**?
