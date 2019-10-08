@@ -9,6 +9,9 @@ The following changes are available in the current SNAPSHOT release (see [Releas
 
 **Developer quality-of-life:**
 
+ - [WIP] Eliminated redux/reselect from UI code and replaced with more sensible modular Contexts.
+ - Switch to Java 11
+
 ## Current milestones
 
 - [v1.0.0 release](../projects/5)
