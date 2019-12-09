@@ -3,16 +3,29 @@ For the changes available in the current SNAPSHOT release, see [Releases](https:
 
 Current contents:
 
+0.15 is heavily focused on internal work. I've been putting a lot of time into the deployment architecture and updating the code to prepare for the next big feature push. This release introduces a Java 11 requirement.
+
 **Features:**
+
+ - Started work on breaking up the application into smaller docker services to optimise containerised deployment or use of only parts of the application. The first to be split out is the [market data](https://hub.docker.com/layers/gruelbox/orko/0.15.1-marketdata/images/sha256-75407bfcdcaebc5979b6e115fd2f0d8d3f148f0bd8535dbfe4ffe492ae4a5aa3) application. Note that this isn't ready for production use and is not currently a documented feature.
+ - Experimental support for using an [Apprise](https://github.com/caronc/apprise) microservice to push notifications to anything supported by Apprise (e.g. Slack, Mattermost, etc) rather than only Telegram.  This is also not currently documented.
 
 **Bug fixes:**
 
+ - Fixed bug where an IP whitelisting expiry could cause the application to go into an endless loop
+
 **Security:**
+
+ - Added a robots.txt file to the web root
 
 **Developer quality-of-life:**
 
- - [WIP] Eliminated redux/reselect from UI code and replaced with more sensible modular Contexts.
- - Switch to Java 11
+ - Switched to Java 11.
+ - Build now supports forks deploying to private docker repositories.
+ - Significant rework of the backend Java configuration architecture to improve modularity.
+ - Removed the need to maintain a modified `cypress.json` file locally when running end-to-end tests locally.
+ - [WIP] Partially eliminated redux/reselect from UI code and replaced with more sensible modular Contexts. This work will continue into the next release.
+
 
 ## Current milestones
 
