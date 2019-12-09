@@ -1,7 +1,7 @@
 Okta is preconfigured and optimised to run securely on [Heroku](https://www.heroku.com/). The Hobby account is cheap at \$7/pm per server if running constantly.
 
 ## Warning
-Heroku instances are too slow to handle more than a handful of coins at once. This is being handled under [#360](https://github.com/gruelbox/orko/issues/360). For higher volumes it is necessary to roll-your-own deployment. In the meantime, either:
+Heroku instances are too slow to handle more than a handful of coins at once. You should:
 
 - keep the number of coins you track as low as possible (particularly making sure you only track one BTC/Fiat pair, which have the highest volume)
 - or avoid server-side ("soft") orders, since there is a good chance they will trigger too late if the server is lagging
