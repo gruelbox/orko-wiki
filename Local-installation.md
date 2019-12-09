@@ -1,5 +1,7 @@
 Running Orko on your local machine is the quickest way to get started. As long as your machine is safe from prying eyes, you don't have to worry about web security.
 
+**Note that from 0.15.1, Java 11 is required.**
+
 ## Using Docker
 
 - Make sure you have Docker and Docker Compose installed. See https://docs.docker.com/install/ for the right guide for your host OS.
