@@ -3,6 +3,7 @@ Running Orko on your local machine is the quickest way to get started. As long a
 **Note that from 0.15.1, Java 11 is required.**
 
 ## Using Docker
+Docker is now the simplest way to run Orko.
 
 - Make sure you have Docker and Docker Compose installed. See https://docs.docker.com/install/ for the right guide for your host OS.
 - Follow the instructions on https://hub.docker.com/r/gruelbox/orko.
