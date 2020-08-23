@@ -4,7 +4,7 @@ This is meant as a full example that uses many of the script engine's features. 
 
 Crossover Trader is a simple automatic trader that buys or sells the selected trading pair when two moving averages of different lengths cross eachother. Crossover Trader is a simple buy/sell automatic trader based either Simple Moving Averages [SMA](https://www.investopedia.com/terms/s/sma.asp) or Exponential Moving Averages [EMA](https://www.investopedia.com/terms/e/ema.asp). 
 
-In the chart below the SMA(12) and SMA(26) are plotted, and the crossover points indicate where the Crossover Trader would place trades.
+In the chart below the SMA(12) and SMA(26) are plotted (technically its SMMA in the image, but its just for illustration purpose), and the crossover points indicate where the Crossover Trader would place trades.
 ![image](https://github.com/AwooOOoo/orko-wiki/blob/master/images/CrossoverTrader-BuySell.png)
 
 You specify the lengths of the fast (i.e SMA(12)) and slow averages (SMA(26)) and the interval at which to sample the price.
@@ -22,7 +22,14 @@ In the example above the current price will be sampled every 5 minutes an each o
  
 The algorithm will continue trading until cancelled.
 
-### Features
+### Engine Features Used
+
+Here are the features of the script engine that are used and for what
+
+- setInterval - Used to create its own periodic ticker (set from initial configuration) from the last trade (setTick) data
+- setTick - Used to get a stream of trades for the selected trading pair
+- setBalance - Used to know what balances are available for the base and quote side of the selected trading pair
+- setOpenOrders - Used to determine is we have an order pending on the exchange
 
 ### Input Parameters
 The following are the  input parameters for the script. If you are going to use this script please create these variables.
@@ -45,7 +52,6 @@ Here is what you can expect from the Server Notifications. The trades themselves
 ![image](https://user-images.githubusercontent.com/17175274/90343512-3666e400-e011-11ea-9c7c-601a62a38c7c.png)
 
 ### Code
-
 ```
 var lastPrice;           // The last price data received
 var subscriptionTicker;  // Subscription for Trade updates
@@ -121,25 +127,21 @@ Improvement: When #985 is addressed we won't have to manually create an EMA func
 function exponentialMovingAverage(averageLength) {     
   var ema = undefined; // Default, buffer still filling 
   
-  notifications.info("Lengths: " + quotes.length + " " + lastEMA[averageLength]);
-
   if (quotes.length <= averageLength && lastEMA[averageLength] == undefined) { 
     // Initialize the EMA with an SMA
-    notifications.info("Initializing EMA!!!");
+    notifications.info("Filling the EMA(" + averageLength  + "): " + quotes.length + "/" + averageLength)
 
     if (quotes.length == averageLength) { // Wait until buffer is full
-      ema = simpleMovingAverage(averageLength) / averageLength;
+      ema = simpleMovingAverage(averageLength);
       lastEMA[averageLength] = ema;
-      notifications.info("EMA initially set to: " + ema);
-    }
+      notifications.info("EMA(" + averageLength + ") initially set to: " + ema);
+    } 
 
-    notifications.info("Filling the EMA(" + averageLength  + "): " + quotes.length + "/" + averageLength)
-  } else if (quotes.length == averageLength) { // Array is full
+  } else if (quotes.length >= averageLength) { // Array is full
     // Calculate EMA
-    notifications.info("Running EMA!!! " + lastPrice + " " + lastEMA[averageLength]);
 
     var multiplier = (2 / (averageLength + 1));
-    ema = (lastPrice - lastEMA[averageLength]) * multiplier + lastEMA;
+    ema = (lastPrice - lastEMA[averageLength]) * multiplier + lastEMA[averageLength];
     lastEMA[averageLength] = ema;
 
     notifications.info("EMA(" + averageLength + ") = " + parseFloat(ema).toFixed(2));
@@ -147,6 +149,7 @@ function exponentialMovingAverage(averageLength) {
 
   return ema;
 }
+
 
 /*
 Update the moving averages and check if conditions to trade have been met
@@ -184,7 +187,7 @@ function updateAveragesAndCheckConditions() {
     // Determine if we are in the trade already
     var inTrade = false;
     if (baseValue > quoteValue) inTrade = true;
-    /*if (debug === true)*/ notifications.info("inTrade:" + inTrade + " - base value: " + baseValue + " quote value: " + quoteValue);
+    if (debug === true) notifications.info("inTrade:" + inTrade + " - base value: " + baseValue + " quote value: " + quoteValue);
 
     // Don't allow trades until the averages can be fully computed (i.e. are defined)
     if (slow !== undefined && fast !== undefined) {  
@@ -256,7 +259,6 @@ function start() {
 Executes when the script is stopped
 */
 function stop() {
-  notifications.info("Stopping");
   events.clear(subscriptionTicker);     // Stop the subscription to the ticker
   events.clear(subscriptionBalance);    // Stop the subscription to the balance(s)
   events.clear(subscriptionOpenOrders); // Stop the subscription to the order order(s)
