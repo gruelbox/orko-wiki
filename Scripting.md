@@ -107,19 +107,6 @@ var interval = setInterval(function() {}, milliseconds)
 // Stop the callback (use in stop() method)
 clearInterval(interval)
 
-// Callback on a price change. Here you have access to:
-//    ticker.open
-//    ticker.last
-//    ticker.bid
-//    ticker.ask
-//    ticker.high
-//    ticker.low
-//    ticker.vwap
-//    ticker.volume
-//    ticker.quoteVolume
-//    ticker.timestamp
-//    ticker.bidSize
-//    ticker.askSize
 // Although note that many exchanges do not provide all this information.
 // The tickerSpec type is the same as used above, e.g. { base: "BTC", counter: "USD", exchange: "bitfinex" }
 events.setTick(function(tickerSpec, ticker) {}, tickerSpec)
@@ -147,7 +134,264 @@ var orderId = trading.limitOrder({
   price: 6000,
   amount: 0.1
 })
+
 ```
+
+### Ticker
+
+You can access the current price information (last trade) for a given trading pair.
+
+```
+balance.setTick(response, tradingPair);
+```
+
+#### Fields Available
+The ticker exposes the following fields;
+
+```
+currencyPair  // Trading pair update is for
+open          // Opening price of current interval
+last          // Last sale price
+bid           // Current Bid price
+ask           // Current Ask price
+high          // High price of current interval
+low           // Low Price of current interval
+avg           // Average price during current interval
+volume        // Current volume in last 24hrs on this trading pair
+quoteVolume   // Volume traded in current interval
+timestamp     // Date/time stamp of this update
+bidSize       // Size of the current best Bid price
+askSize       // Size of the current best Ask price
+```
+
+#### Complete Example
+The following example gets the ticker of the currently selected exchange / trading pair.
+
+```
+var subscription
+var count = 0
+
+function start() {
+  subscription = events.setTick(
+    function(event) {
+      var t = event.ticker();
+      notifications.info("Price is " + t.currencyPair + " - Bid: " + t.bid + " Ask: " + t.ask);
+      if (count++ >= 5) {
+        control.done()
+      }
+    },
+    parameters.selectedCoin
+  )
+  return RUNNING
+}
+
+function stop() {
+  events.clear(subscription)
+}
+```
+
+#### Example Output:
+Price is ETH/EUR - Bid: 347.55000000 Ask: 348.11000000
+Price is ETH/EUR - Bid: 347.55000000 Ask: 348.11000000
+Price is ETH/EUR - Bid: 347.55000000 Ask: 348.11000000
+Price is ETH/EUR - Bid: 347.55000000 Ask: 348.12000000
+Price is ETH/EUR - Bid: 347.55000000 Ask: 348.12000000
+
+
+### Account Balance
+
+You can access the balance information for a given trading pair.
+
+```
+balance.setBalance(response, tradingPair);
+```
+
+Note that the *response* is called twice, once for the base and once for the quote. Assuming you had ETH/EUR selected, in the example below, it would call the function once for ETH and once for EUR.
+
+
+#### Fields Available
+The balance exposes the following fields;
+
+```
+currency    // Currency type for this balance (i.e. ETH) 
+total       // Total Balance
+available   // Available Balance
+frozen      // Frozen Balance
+borrowed    // Borrowed Balance
+loaned      // Loaned Balance
+withdrawing // Withdrawing Balance
+depositing  // Depositing Balance
+```
+
+#### Complete Example
+The following example gets the balance of the currently selected exchange / trading pair and displays the currency and available balance.
+
+```
+var count = 0;
+
+function start() {
+  var subscription = events.setBalance(
+    function(event) {
+      notifications.info(++count + " Balance: " + event.balance().currency + " - " + event.balance().available);
+      
+    },
+    parameters.selectedCoin
+  );
+  
+  return RUNNING
+}
+
+function stop() {
+  events.clear(subscription);  // Stop the subscription
+}
+```
+
+#### Example Output:
+> Balance: ETH - 1000
+> Balance: EUR - 1000
+
+### Open Orders
+
+You can access the open orders information for a given trading pair.
+
+```
+events.setOpenOrders(response, tradingPair);
+```
+
+#### Fields Available
+The open orders exposes the following fields;
+[order=LimitOrder [limitPrice=360, Order [type=ASK, originalAmount=10, cumulativeAmount=0, averagePrice=0, fee=0, instrument=ETH/EUR, id=1, timestamp=Thu Aug 20 16:08:14 CEST 2020, status=NEW, flags=[], userReference=175420665]]
+
+#### Complete Example
+The following example gets the balance of the currently selected exchange / trading pair and displays the currency and available balance.
+
+```
+var count = 0;
+
+function start() {
+  var subscription = events.setOpenOrders(
+    function(event) {
+      notifications.info("*** OPEN ORDERS: " + event.openOrders());
+      
+      if (count++ >= 1) {
+        control.done()
+      }
+    },
+    parameters.selectedCoin
+  );
+  
+  return RUNNING
+}
+
+function stop() {
+  events.clear(subscription);  // Stop the subscription
+}
+```
+
+#### Example Output:
+> Open orders:
+> [order=LimitOrder [limitPrice=360, Order [type=ASK, originalAmount=10, cumulativeAmount=0, averagePrice=0, fee=0, instrument=ETH/EUR, id=1, timestamp=Thu Aug 20 16:08:14 CEST 2020, status=NEW, flags=[], userReference=175420665]]]
+> [order=LimitOrder [limitPrice=370, Order [type=ASK, originalAmount=10, cumulativeAmount=0, averagePrice=0, fee=0, instrument=ETH/EUR, id=2, timestamp=Thu Aug 20 16:08:19 CEST 2020, status=NEW, flags=[], userReference=154148732]]]
+
+### Order Book
+
+You can access the order book information for a given trading pair.
+
+```
+events.setOrderBook(response, tradingPair);
+```
+
+#### Fields Available
+The order book exposes the following fields within bids and asks;
+
+```
+bids  // Current list of bids
+asks  // Current list of asks
+```
+
+More details
+> limitPrice=347.77000000, Order [type=BID, originalAmount=0.32508000, cumulativeAmount=null, averagePrice=null, fee=null, instrument=ETH/EUR, id=, timestamp=Thu Aug 20 15:12:35 CEST 2020, status=null, flags=[], userReference=192475211]], LimitOrder [limitPrice=347.75000000, Order [type=BID, originalAmount=0.16254000, cumulativeAmount=null, averagePrice=null, fee=null, instrument=ETH/EUR, id=, timestamp=Thu Aug 20 15:12:37 CEST 2020, status=null, flags=[], userReference=113477373]
+
+#### Complete Example
+The following example gets the order book of the currently selected exchange / trading pair.
+
+```
+var count = 0;
+
+function start() {
+  var subscription = events.setOrderBook(
+    function(event) {
+      notifications.info("*** OrderBook BIDS: " + event.orderBook().bids);
+      notifications.info("*** OrderBook ASKS: " + event.orderBook().asks);
+      
+      if (count++ >= 1) {
+        control.done()
+      }
+    },
+    parameters.selectedCoin
+  );
+  
+  return RUNNING
+}
+
+```
+
+#### Example Output:
+[LimitOrder [limitPrice=347.77000000, Order [type=BID, originalAmount=0.32508000, cumulativeAmount=null, averagePrice=null, fee=null, instrument=ETH/EUR, id=, timestamp=Thu Aug 20 15:12:35 CEST 2020, status=null, flags=[], userReference=192475211]], LimitOrder [limitPrice=347.75000000, Order [type=BID, originalAmount=0.16254000, cumulativeAmount=null, averagePrice=null, fee=null, instrument=ETH/EUR, id=, timestamp=Thu Aug 20 15:12:37 CEST 2020, status=null, flags=[], userReference=113477373]], LimitOrder [limitPrice=347.56000000, Order [type=BID, originalAmount=1.07717000, cumulativeAmount=null, averagePrice=null, fee=null, instrument=ETH/EUR, id=, timestamp=Thu Aug 20 15:12:26 CEST 2020, status=null, flags=[], userReference=155455028]], LimitOrder [limitPrice=347.38000000, Order [type=BID, originalAmount=2.69161000, cumulativeAmount=null, averagePrice=null, fee=null, instrument=ETH/EUR, id=null, timestamp=null, status=null, flags=[], userReference=115320557]] ...
+
+### User Trades
+
+You can access the user trades information for a given trading pair.
+
+```
+events.setUserTrades(response, tradingPair);
+```
+
+#### Fields Available
+User Trades exposes the following fields;
+
+```
+type                // type of trade (BID / ASK) 
+originalAmount      // Amount to be traded 
+currencyPair        // trading pair (i.e ETH/EUR) 
+price               // price bid / asked 
+timestamp           // time/date of transaction (i.e. Fri Aug 21 12:48:59 CEST 2020) 
+id                  // Identifier
+orderId             // Unique identifier for the trade i.e. '12345678' 
+feeAmount           // Transaction Fee amount 
+feeCurrency         // Curreny 'feeAmount' is in (i.e. 'ETH') 
+orderUserReference  // User defined identifier for the transaction (i.e. 'null')
+```
+
+#### Complete Example
+The following example gets the User trades of the currently selected exchange / trading pair.
+
+```
+var count = 0;
+
+function start() {
+  var subscription = events.setUserTrades(
+    function(event) {
+      notifications.info("*** USER TRADES: " + event.trade());
+      
+      if (count++ >= 1) {
+        control.done()
+      }
+    },
+    parameters.selectedCoin
+  );
+  
+  return RUNNING
+}
+```
+
+#### Example Output:
+UserTrade[type=BID, originalAmount=1, currencyPair=ETH/EUR, price=346.10000000, timestamp=Fri Aug 21 12:48:59 CEST 2020, id=1, orderId='1', feeAmount=0, feeCurrency='ETH', orderUserReference='null']'
+
+
+
+
+
 
 ### Parameters
 
