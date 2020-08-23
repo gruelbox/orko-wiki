@@ -17,6 +17,7 @@
 1. [User Guide](User-Guide)
     1. [Scripting](Scripting)
     1. [Script examples](Script-Library)
+    1. [Simple Crossover Trader](Example-Script-Crossover-Trader)
 1. [Supporting the project](Supporting-The-Project)
 1. [Contributing](Contributing)
 1. [Developer Guide](Developer-guide)
