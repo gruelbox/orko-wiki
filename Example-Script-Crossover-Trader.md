@@ -2,14 +2,23 @@
 
 This is meant as a full example that uses many of the script engine's features. This implementation will be updated as new features are added to the script engine.
 
-Crossover Trader is a simple automatic trader that buys or sells the selected trading pair when two moving averages of different lengths cross eachother. Crossover Trader is a simple buy/sell automatic trader based either Simple Moving Averages [SMA](https://www.investopedia.com/terms/s/sma.asp) or Exponential Moving Averages [EMA](https://www.investopedia.com/terms/e/ema.asp). You specify the lengths of the fast and slow averages and the interval at which to sample the price.
+Crossover Trader is a simple automatic trader that buys or sells the selected trading pair when two moving averages of different lengths cross eachother. Crossover Trader is a simple buy/sell automatic trader based either Simple Moving Averages [SMA](https://www.investopedia.com/terms/s/sma.asp) or Exponential Moving Averages [EMA](https://www.investopedia.com/terms/e/ema.asp). 
+
+In the chart below the SMA(12) and SMA(26) are plotted, and the crossover points indicate where the Crossover Trader would place trades.
+![image](https://github.com/AwooOOoo/orko-wiki/blob/master/images/CrossoverTrader-BuySell.png)
+
+You specify the lengths of the fast (i.e SMA(12)) and slow averages (SMA(26)) and the interval at which to sample the price.
 
 For instance
-interval: 5
-fast average: 12
-slow average: 26
 
-In the example above the current price will be sampled every 5 minutes an each of these samples will be fed to the slow and fast moving averages. Since the fast moving average has a smaller length it is more responsive to changes in the market and this moves 'faster'. If the fast average crosses above the slow average a 'BUY' order is issued since the market is trending upwards. If the fast average crosses below the slow averages a 'SELL' order is issued since the market is trending downwards. The orders are currently set as limit orders at the current price so they should (partially) imitate market orders.
+|  Parameter | Value |
+|------------|-------|
+|interval | 5 |
+|algorithm | SMA |
+|fast average| 12 |
+|slow average| 26 |
+
+In the example above the current price will be sampled every 5 minutes an each of these samples will be fed to the slow and fast simple moving averages (SMA). Since the fast moving average has a smaller length it is more responsive to changes in the market and this moves 'faster'. If the fast average crosses above the slow average a 'BUY' order is issued since the market is trending upwards. If the fast average crosses below the slow averages a 'SELL' order is issued since the market is trending downwards. The orders are currently set as limit orders at the current price so they should (partially) imitate market orders.
  
 The algorithm will continue trading until cancelled.
 
@@ -27,10 +36,12 @@ The following are the  input parameters for the script. If you are going to use 
 
 The _intervalSize_ defines an interval at which a ticker is created internally to tracker the price at the defined interval. The _fastAverageLength_ and _slowAverageLength_ define the number of ticks from the ticker defined by the _intervalSize_. Since there is no current access to history data in the script it you need to wait for the moving averages to fill up before they can be used. This time is the _intervalSize_ * _[fast|slow]AverageLength_ so since the defaults are 5, 12 & 26, this means you need to wait 5 minutes * 12 samples for the fast average and 5 minutes * 26 samples for the slow average so be careful what you set these to as it will take a while to be ready.
 
-Here is an example with really short lengths which will have the system ready quickly for testing, but obviously won't be much use for trading.
-![image](https://user-images.githubusercontent.com/17175274/90343481-f1db4880-e010-11ea-960f-0c9c428d2748.png)
+Here is Crossover Trader configuration with the default values.
+
+![image](https://github.com/AwooOOoo/orko-wiki/blob/master/images/CrossoverTraderMenu.png)
 
 Here is what you can expect from the Server Notifications. The trades themselves are highlighted and updates to the SMA values are provided at each interval.
+
 ![image](https://user-images.githubusercontent.com/17175274/90343512-3666e400-e011-11ea-9c7c-601a62a38c7c.png)
 
 ### Code
